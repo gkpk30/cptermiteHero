@@ -113,7 +113,7 @@ export default function Header({location}) {
                      <Hidden smUp>
                          
                         <IconButton onClick={() =>setOpenDrawer(true)}>
-                            <MenuIcon />
+                            <MenuIcon color='third' />
                         </IconButton>
                      </Hidden>
              
@@ -133,7 +133,7 @@ export default function Header({location}) {
                                            <ListItem  key={link.name}> 
                                                <Button 
                                                     underline="none"  
-                                                    sx={{color: 'text.main', fontWeight: 'medium', mr: 2}}  
+                                                    sx={{color: 'text.primary', fontWeight: 'medium', mr: 2}}  
                                                     variant="button" 
                                                     to={link.href}
                                                     component={Link}

@@ -12,6 +12,7 @@ const theme = createTheme({
     },
     secondary: {
     //   main: '#19857b',
+    //Light Blue
       main: '#18A0FB',
     },
     third: {
