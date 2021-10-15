@@ -2,7 +2,7 @@
 title: Borate Treatment
 slug: borate-treatment
 thumb: 
-featuredImg: '../images/featured/borate-banner
+featuredImg: '../images/featured/borate-banner'
 ---
 
 ### Borate Treatment
