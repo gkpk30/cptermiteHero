@@ -2,7 +2,7 @@
 title: Foam Treatment
 slug: foam
 thumb: 
-featuredImg: '../images/featured/foam-banner
+featuredImg: '../images/featured/foam-banner'
 ---
 
 ### Foam Treatment

@@ -2,7 +2,7 @@
 title: Soil Treatment
 slug: soil
 thumb: 
-featuredImg: '../images/featured/soil-banner
+featuredImg: '../images/featured/soil-banner'
 ---
 
 ### Soil Treatment

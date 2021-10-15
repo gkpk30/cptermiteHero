@@ -2,7 +2,7 @@
 title: Cellulose Removal
 slug: cellulose-removal
 thumb: 
-featuredImg: '../images/featured/cellulose-banner
+featuredImg: '../images/featured/cellulose-banner'
 ---
 
 ### Cellulose Treatment

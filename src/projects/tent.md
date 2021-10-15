@@ -2,7 +2,7 @@
 title: Tent
 slug: tent
 thumb: 
-featuredImg: '../images/featured/tent-banner
+featuredImg: '../images/featured/tent-banner'
 ---
 
 ### Traditional Tent Fumigation

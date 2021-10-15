@@ -2,7 +2,7 @@
 title: pre-construction 
 slug: pre-construction
 thumb: 
-featuredImg: '../images/featured/pre-construction-banner
+featuredImg: '../images/featured/pre-construction-banner'
 ---
 
 ### Pre-Construction Treatment

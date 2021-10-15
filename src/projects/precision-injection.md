@@ -2,7 +2,7 @@
 title: Precision Treatment
 slug: precision-treatment
 thumb: 
-featuredImg: '../images/featured/precision-banner
+featuredImg: '../images/featured/precision-banner'
 ---
 
 ### Precision Treatment
