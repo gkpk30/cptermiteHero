@@ -135,8 +135,8 @@ export default function Header({location}) {
                                                     underline="none"  
                                                     sx={{color: 'text.main', fontWeight: 'medium', mr: 2}}  
                                                     variant="button" 
-                                                   
                                                     to={link.href}
+                                                    component={Link}
                                                     >
                                                     {link.name}
                                                 </Button>
