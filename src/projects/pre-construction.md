@@ -1,7 +1,7 @@
 ---
-title: pre-construction 
+title: pre-construction
 slug: pre-construction
-thumb: 
+thumb: construction
 featuredImg: '../images/featured/pre-construction-banner'
 ---
 

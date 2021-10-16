@@ -1,7 +1,7 @@
 ---
 title: Cellulose Removal
 slug: cellulose-removal
-thumb: 
+thumb: cellulose
 featuredImg: '../images/featured/cellulose-banner'
 ---
 

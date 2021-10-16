@@ -1,7 +1,7 @@
 ---
 title: Foam Treatment
 slug: foam
-thumb: 
+thumb: foam
 featuredImg: '../images/featured/foam-banner'
 ---
 

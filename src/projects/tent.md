@@ -1,7 +1,7 @@
 ---
 title: Tent
 slug: tent
-thumb: 
+thumb: tent
 featuredImg: '../images/featured/tent-banner'
 ---
 

@@ -93,7 +93,7 @@ export default function Header({location}) {
                                             >
                                                 {link.name}
                                             </Link> 
-                                            <IconButton aria-label="delete" sx={{color:'text.secondary', pl:'1'}}  >{link.endIcon()}</IconButton>
+                                            <IconButton aria-label="menu" sx={{color:'text.secondary', pl:'1'}}  >{link.endIcon()}</IconButton>
                                         </Box>
                                         :
                                         <Link 

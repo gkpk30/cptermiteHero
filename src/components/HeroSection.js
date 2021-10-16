@@ -21,7 +21,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 
 const heroSection ={
-                height: 700,
+                height: '90vh',
                 position: 'relative',
                 // backgroundImage: "url(../../imageMesh.jpg)",
                 // backgroundSize: 'cover',

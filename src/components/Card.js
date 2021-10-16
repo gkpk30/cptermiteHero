@@ -6,7 +6,7 @@ import { CardActionArea } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { StaticImage } from 'gatsby-plugin-image'
 
-export default function CustomCard() {
+export default function CustomCard(props) {
     return (
         <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -19,12 +19,12 @@ export default function CustomCard() {
         /> */}
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            {props.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+           {props.excerpt}
           </Typography>
+          <Typography>Time To Read: {props.timeToRead}</Typography>
         </CardContent>
       </CardActionArea>
     </Card>

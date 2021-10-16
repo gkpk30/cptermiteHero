@@ -1,7 +1,7 @@
 ---
 title: Borate Treatment
 slug: borate-treatment
-thumb: 
+thumb: borate
 featuredImg: '../images/featured/borate-banner'
 ---
 

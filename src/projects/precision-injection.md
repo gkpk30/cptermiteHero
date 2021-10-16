@@ -1,7 +1,7 @@
 ---
 title: Precision Treatment
 slug: precision-treatment
-thumb: 
+thumb: precision
 featuredImg: '../images/featured/precision-banner'
 ---
 
