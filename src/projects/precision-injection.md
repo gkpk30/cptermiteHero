@@ -1,8 +1,8 @@
 ---
 title: Precision Treatment
 slug: precision-treatment
-thumb: precision
-featuredImg: '../images/featured/precision-banner'
+thumb: ../images/thumbs/construction.jpg
+featuredImg: ../images/featured/construction-featured.jpg
 ---
 
 ### Precision Treatment

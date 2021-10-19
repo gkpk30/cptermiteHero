@@ -1,8 +1,8 @@
 ---
-title: Tent
+title: Traditional Tent Fumigation
 slug: tent
-thumb: tent
-featuredImg: '../images/featured/tent-banner'
+thumb: ../images/thumbs/tent800x534.jpg
+featuredImg: ../images/featured/tent.jpg
 ---
 
 ### Traditional Tent Fumigation

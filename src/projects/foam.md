@@ -1,8 +1,8 @@
 ---
 title: Foam Treatment
 slug: foam
-thumb: foam
-featuredImg: '../images/featured/foam-banner'
+thumb: ../images/thumbs/construction.jpg
+featuredImg: ../images/featured/construction-featured.jpg
 ---
 
 ### Foam Treatment

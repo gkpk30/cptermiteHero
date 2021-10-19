@@ -9,6 +9,7 @@ import Grid from '@mui/material/Grid'
 import Paper from '@mui/material/Paper';
 import CustomCard from '../../components/Card'
 
+
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(1),
@@ -36,12 +37,12 @@ export default function Index({data}) {
     return (
         
             <>
-                {/* <Box maxWidth="100%" height='auto'>
-                    <StaticImage style={{width:'100%', height:'100%'}}  src="../images/house.png" alt="Free Estimate, Treatment Options, Warranty and Annual Inspection" objectFit="cover" />
-                </Box> */}
                 <Box maxWidth="100%" height='auto'>
-                    <StaticImage style={{width:'100%', height:'100%'}}  src="../../images/house.png" alt="Free Estimate, Treatment Options, Warranty and Annual Inspection" objectFit="cover" />
+                    <StaticImage style={{width:'100%', height:'100%'}}  src="../images/house.png" alt="Free Estimate, Treatment Options, Warranty and Annual Inspection" objectFit="cover" />
                 </Box>
+                {/* <Box maxWidth="100%" height='auto'>
+                    <StaticImage style={{width:'100%', height:'100%'}}  src="../../images/house.png" alt="Free Estimate, Treatment Options, Warranty and Annual Inspection" objectFit="cover" />
+                </Box> */}
                 <Container maxWidth="md">
                 <Typography variant='h4' component='h1'>
                         We have you covered at Captain Termite Control
@@ -65,6 +66,8 @@ export default function Index({data}) {
                     ))}
 
                     </Grid> */}
+
+                    
                     <Box sx={{margin:'auto'}}>
                         <Grid container spacing={2}   direction='row'>
                             {treatments.map(treatment=> (
@@ -74,11 +77,13 @@ export default function Index({data}) {
                                         excerpt={treatment.excerpt}
                                         timeToRead={treatment.timeToRead}
                                         thumbnail={treatment.thumb}
+                                        thumbImage={treatment.frontmatter.thumb.childImageSharp.gatsbyImageData}
                                     />
                                 </Grid>
                             ))}    
                         </Grid>
                     </Box>
+                    
                 </Container>
             </>
        
@@ -86,23 +91,43 @@ export default function Index({data}) {
 }
 
 export const query = graphql`
-  query treatmentsPage{
+  {
     allMarkdownRemark {
       nodes {
         frontmatter {
-          featuredImg
           slug
           title
-          thumb
+          thumb {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            }
+          }
         }
-        html
-        id
         excerpt(truncate: false)
         timeToRead
+        id
       }
     }
   }
 `
+
+// export const query = graphql`
+//   query treatmentsPage{
+//     allMarkdownRemark {
+//       nodes {
+//         frontmatter {
+//           slug
+//           title
+//           thumb
+//         }
+//         html
+//         id
+//         excerpt(truncate: false)
+//         timeToRead
+//       }
+//     }
+//   }
+// `
 
 // export const query = graphql`
 //   {

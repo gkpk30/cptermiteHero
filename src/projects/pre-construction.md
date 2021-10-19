@@ -1,8 +1,8 @@
 ---
-title: pre-construction
+title: Pre-construction
 slug: pre-construction
-thumb: construction
-featuredImg: '../images/featured/pre-construction-banner'
+thumb: ../images/thumbs/construction.jpg
+featuredImg: ../images/featured/construction-featured.jpg
 ---
 
 ### Pre-Construction Treatment

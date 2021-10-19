@@ -104,6 +104,7 @@ export default function Header({location}) {
                                             to={link.href}
                                             // endIcon={<ArrowDropDownIcon/>}
                                             // component={Button}
+                                            
                                         >
                                             {link.name}
                                         </Link>
@@ -137,8 +138,11 @@ export default function Header({location}) {
                                                     variant="button" 
                                                     to={link.href}
                                                     component={Link}
+                                                    onClick={()=> setOpenDrawer(false)}
                                                     >
+                                                    
                                                     {link.name}
+                                                    
                                                 </Button>
                                            </ListItem>
                                         ))}

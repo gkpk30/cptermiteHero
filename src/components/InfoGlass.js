@@ -25,8 +25,9 @@ export default function InfoGlass() {
                         Schedule Your <strong>Free</strong> Inspection
                     </Typography>
                     <Typography variant='h6' >
-                        8am-8pm / 7days a week (818) 822-6782
+                        8am-8pm / 7days a week 
                     </Typography>
+                    <Typography variant='h6' >(818) 822-6782</Typography>
         </Box>
     )
 }

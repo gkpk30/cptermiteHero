@@ -1,8 +1,8 @@
 ---
 title: Borate Treatment
 slug: borate-treatment
-thumb: borate
-featuredImg: '../images/featured/borate-banner'
+thumb: ../images/thumbs/construction.jpg
+featuredImg: ../images/featured/construction-featured.jpg
 ---
 
 ### Borate Treatment

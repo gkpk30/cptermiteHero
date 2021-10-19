@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import CustomCard from '../components/Card'
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
+import QuiltedImageList from '../components/QuiltedImageList'
 
 
 export default function Index() {
@@ -17,25 +18,20 @@ export default function Index() {
  
     <>
       <HeroSection/>
-      <Container maxWidth="md">
+      {/* <Container maxWidth="md">
         <Paper sx={{backgroundColor:"primary.main", height:'auto', p:2}}>
-          <Typography color="text.main" elevation={3}   variant="h5">
-          Find out if your home or business has a termite infestation. Call us for a FREE inspection.
-          </Typography>
-          <Typography color="text.main" sx={{my:3}}>
-          WE WELCOME: Residential | Commercial | Property Management| Homeowners Associations | Senior Homes | Construction Companies
-          </Typography>
-          <Box sx={{margin:'auto'}}>
-            <Grid container spacing={2}   direction='row'>
-              <Grid item><CustomCard/></Grid>
-              <Grid item><CustomCard/></Grid>
-              <Grid item><CustomCard/></Grid>
-             
-            </Grid>
-          </Box>
-        
+          <Container>
+            <Typography color="text.main" elevation={3}   variant="h5">
+            Find out if your home or business has a termite infestation. Call us for a FREE inspection.
+            </Typography>
+            <Typography color="text.main" sx={{my:3}}>
+            WE WELCOME: Residential | Commercial | Property Management| Homeowners Associations | Senior Homes | Construction Companies
+            </Typography>
+          
+        <QuiltedImageList/>
+        </Container>
         </Paper>
-      </Container>
+      </Container> */}
       
     </>
   );

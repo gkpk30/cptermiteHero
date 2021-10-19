@@ -77,8 +77,16 @@ export default function HeroSection() {
                             </Grid>
                        
                     </Hidden>
+                    {/* <Grid item>
+                        <Typography color="text.main" elevation={3}   variant="h5">
+                        Find out if your home or business has a termite infestation. Call us for a FREE inspection.
+                        </Typography>
+                        <Typography color="text.main" sx={{my:3}}>
+                        WE WELCOME: Residential | Commercial | Property Management| Homeowners Associations | Senior Homes | Construction Companies
+                        </Typography>
+                    </Grid> */}
                 </Grid>
-
+                
             </Container>
         </Paper>
     )

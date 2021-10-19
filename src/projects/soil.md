@@ -1,8 +1,8 @@
 ---
 title: Soil Treatment
 slug: soil
-thumb: soil
-featuredImg: '../images/featured/soil-banner'
+thumb: ../images/thumbs/Termites-attack-home-from-underground.jpg
+featuredImg: ../images/featured/construction-featured.jpg
 ---
 
 ### Soil Treatment
