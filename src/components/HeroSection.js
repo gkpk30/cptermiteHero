@@ -51,7 +51,7 @@ export default function HeroSection() {
             />
             <Container maxWidth="md"sx={heroContainer} >
                 <Grid container alignItems="center" justifyContent="space-between"sx={{height:'100%', position: 'relative', zIndex: '100'}}>
-                   <Grid item sm={12}  >
+                   <Grid item xs={12}  >
                    <InfoGlass/>
                    </Grid>
                     <Zoom in={shouldShow}>
