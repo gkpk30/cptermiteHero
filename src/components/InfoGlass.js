@@ -16,7 +16,7 @@ export default function InfoGlass() {
                 border: '1px solid rgba( 255, 255, 255, 0.18 )',
                 p: 1,
                 textAlign: 'center',
-                maxWidth: '70%',
+                maxWidth: '80%',
                 margin: 'auto',
                 
             }}
