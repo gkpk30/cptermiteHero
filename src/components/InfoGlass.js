@@ -16,18 +16,25 @@ export default function InfoGlass() {
                 border: '1px solid rgba( 255, 255, 255, 0.18 )',
                 p: 1,
                 textAlign: 'center',
-                maxWidth: '80%',
+                // maxWidth: '80%',
                 margin: 'auto',
+                maxWidth: {
+                    xs: '90%', // theme.breakpoints.up('xs')
+                    sm: '80%', // theme.breakpoints.up('sm')
+                    md: '60%', // theme.breakpoints.up('md')
+                    lg: '50%', // theme.breakpoints.up('lg')
+                    xl: '40%', // theme.breakpoints.up('xl')
+                  },
                 
             }}
         >
-                    <Typography variant='body1' component="h6"  sx={{color: 'white'}} >
+                    <Typography variant='body1'   sx={{color: 'white'}} >
                         Schedule Your <strong>Free</strong> Inspection
                     </Typography>
-                    <Typography variant='h6' >
+                    <Typography variant='body2'  >
                         8am-8pm / 7days a week 
                     </Typography>
-                    <Typography variant='h6' >(818) 822-6782</Typography>
+                    <Typography  >(818) 822-6782</Typography>
         </Box>
     )
 }

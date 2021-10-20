@@ -55,7 +55,7 @@ export default function HeroSection() {
                    <InfoGlass/>
                    </Grid>
                     <Zoom in={shouldShow}>
-                        <Grid item sm={8}>
+                        <Grid item sm={8} xs={12}>
                             <Typography fontWeight="700" component="h1" variant="h3" sx={{lineHeight: '1'}} >
                                 Effective Termite Control Solutions
                             </Typography>
@@ -70,21 +70,14 @@ export default function HeroSection() {
                             </Box>
                         </Grid>
                     </Zoom>
-                    <Hidden smDown>
+                    {/* <Hidden smDown> */}
                         
                             <Grid item>
-                                <Social direction='column'/>
+                                <Social/>
                             </Grid>
                        
-                    </Hidden>
-                    {/* <Grid item>
-                        <Typography color="text.main" elevation={3}   variant="h5">
-                        Find out if your home or business has a termite infestation. Call us for a FREE inspection.
-                        </Typography>
-                        <Typography color="text.main" sx={{my:3}}>
-                        WE WELCOME: Residential | Commercial | Property Management| Homeowners Associations | Senior Homes | Construction Companies
-                        </Typography>
-                    </Grid> */}
+                    {/* </Hidden> */}
+                   
                 </Grid>
                 
             </Container>
