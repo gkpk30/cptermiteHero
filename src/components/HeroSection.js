@@ -23,6 +23,13 @@ import { StaticImage } from 'gatsby-plugin-image'
 const heroSection ={
                 height: '90vh',
                 position: 'relative',
+                // maxHeight: {
+                //     xs: '90%', // theme.breakpoints.up('xs')
+                //     sm: '80%', // theme.breakpoints.up('sm')
+                //     md: '60%', // theme.breakpoints.up('md')
+                //     lg: '50%', // theme.breakpoints.up('lg')
+                //     xl: '40%', // theme.breakpoints.up('xl')
+                // }
                 // backgroundImage: "url(../../imageMesh.jpg)",
                 // backgroundSize: 'cover',
                 // backgroundPosition: 'top'
@@ -39,7 +46,8 @@ export default function HeroSection() {
    
 
     return (
-        <Paper sx={heroSection} 
+        <Paper 
+        sx={heroSection} 
         >
             <StaticImage src= "../images/imageMesh.jpg" alt=""  eager="true" placeholder="blurred" objectFit="fill"  
                 style={{

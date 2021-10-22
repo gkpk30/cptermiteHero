@@ -36,15 +36,15 @@ export default function About() {
             position:"absolute",
             right:'0',
             top:'-10%',
-            width:'25%',
+            width:'40%',
           }}
         />
-      <StaticImage src= "../images/housecaplarge_mb.png" alt="captain termite"  eager="true" placeholder="blurred" objectFit="constrained" 
+      <StaticImage src= "../images/housecaplarge_mb.png"  alt="captain termite"  eager="true" placeholder="blurred" objectPosition="left"  objectFit="cover" 
           style={{
             height:'100%', 
             width: '100%', 
             zIndex:'1',
-            position: 'absolute'
+            position: 'absolute',
         }} 
       />
       </Box>

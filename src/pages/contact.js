@@ -53,9 +53,7 @@ export default function Contact() {
             />
             
             </Box>
-                    <div>
-                        Contact Page
-                    </div>
+                    
                 </Container>
                 <Box sx={{ minWidth: 120, maxWidth:500, margin:'auto' }}>
       <FormControl fullWidth>
