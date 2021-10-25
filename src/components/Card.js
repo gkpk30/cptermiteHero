@@ -6,20 +6,16 @@ import { CardActionArea } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { StaticImage } from 'gatsby-plugin-image'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import {Link} from 'gatsby'
 
 export default function CustomCard(props) {
     return (
-        <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-          {/* <StaticImage src= "../images/imageMesh.jpg" alt=""  eager="true" placeholder="blurred" objectFit="fill"/> */}
-          <GatsbyImage image={props.thumbImage} alt=""/>
-        {/* <CardMedia
-          component="img"
-          height="140"
-        //   image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
-        /> */}
-        <CardContent>
+        <Card sx={{ maxWidth: 345 }} >
+      <CardActionArea component={Link} to={props.slug} >
+         
+          <GatsbyImage image={props.thumbImage} alt={props.title} />
+      
+        <CardContent  >
           <Typography gutterBottom variant="h5" component="div">
             {props.title}
           </Typography>

@@ -1,6 +1,6 @@
 ---
 title: Borate Treatment
-slug: borate-treatment
+slug: borate
 thumb: ../images/thumbs/construction.jpg
 featuredImg: ../images/featured/construction-featured.jpg
 ---

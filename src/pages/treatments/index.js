@@ -21,7 +21,12 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Index({data}) {
     console.log(data)
     const treatments = data.allMarkdownRemark.nodes 
+
+    console.log('Treatments: ', treatments)
+    // console.log('Excerpts: ', treatments.excerptAst.children[2].children[0].value)
     console.table(treatments)
+    // console.log('excerpts:', treatments.excerptAst.children[2].children[0].value)
+    // console.log('excerpts:', treatments.excerptAst)
 
     // const treatments = [
     //     {type: "Precision Injection", description: "Precision injection is a spot treatment where we inject PremiseII or Termidor directly into the wood that contains termite colonies. We basically fill the tunnels in the wood that the colony has created and fill them up. After spot treatments a coat of Bora-Care is sprayed over the wood. Because this a localized treatment type homeowners can be home while we work. It only takes a couple of hours for our experienced specialist to finish."},
@@ -68,13 +73,14 @@ export default function Index({data}) {
                     </Grid> */}
 
                     
-                    <Box sx={{margin:'auto'}}>
-                        <Grid container spacing={2}   direction='row'>
+                    <Box >
+                        <Grid container  spacing={2} justifyContent='center'   direction='row'>
                             {treatments.map(treatment=> (
                                 <Grid item key={treatment.id}>
                                     <CustomCard treatment={treatment}
                                         title={treatment.frontmatter.title}
-                                        excerpt={treatment.excerpt}
+                                        slug={treatment.frontmatter.slug}
+                                        excerpt={treatment.excerptAst.children[2].children[0].value}
                                         timeToRead={treatment.timeToRead}
                                         thumbnail={treatment.thumb}
                                         thumbImage={treatment.frontmatter.thumb.childImageSharp.gatsbyImageData}
@@ -90,6 +96,27 @@ export default function Index({data}) {
     )
 }
 
+// export const query = graphql`
+//   {
+//     allMarkdownRemark {
+//       nodes {
+//         frontmatter {
+//           slug
+//           title
+//           thumb {
+//             childImageSharp {
+//               gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+//             }
+//           }
+//         }
+//         excerpt(pruneLength: 115, format: HTML)
+//         timeToRead
+//         id
+//       }
+//     }
+//   }
+// `
+
 export const query = graphql`
   {
     allMarkdownRemark {
@@ -99,66 +126,15 @@ export const query = graphql`
           title
           thumb {
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, height: 210)
             }
           }
         }
-        excerpt(truncate: false)
         timeToRead
         id
+        excerptAst(pruneLength: 100)
       }
     }
   }
 `
 
-// export const query = graphql`
-//   query treatmentsPage{
-//     allMarkdownRemark {
-//       nodes {
-//         frontmatter {
-//           slug
-//           title
-//           thumb
-//         }
-//         html
-//         id
-//         excerpt(truncate: false)
-//         timeToRead
-//       }
-//     }
-//   }
-// `
-
-// export const query = graphql`
-//   {
-//     allMarkdownRemark {
-//       edges {
-//         node {
-//           frontmatter {
-//             featuredImg
-//             slug
-//             title
-//           }
-//           html
-//           id
-//           timeToRead
-//           excerpt
-//         }
-//       }
-//     }
-//   }`
-
-// export const query = graphql`
-//   {
-//     markdownRemark {
-//       frontmatter {
-//         featuredImg
-//         slug
-//         title
-//       }
-//       html
-//       id
-//       excerpt
-//     }
-//   }
-// `
