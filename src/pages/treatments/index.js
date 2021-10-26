@@ -126,7 +126,7 @@ export const query = graphql`
           title
           thumb {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, height: 210)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, height: 210)
             }
           }
         }
@@ -137,4 +137,25 @@ export const query = graphql`
     }
   }
 `
+// export const query = graphql`
+//   {
+//     allMarkdownRemark {
+//       nodes {
+//         frontmatter {
+//           slug
+//           title
+//           thumb {
+//             childImageSharp {
+//               gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, height: 210)
+//               resize(fit: COVER)
+//             }
+//           }
+//         }
+//         timeToRead
+//         id
+//         excerptAst(truncate: false)
+//       }
+//     }
+//   }
+// `
 

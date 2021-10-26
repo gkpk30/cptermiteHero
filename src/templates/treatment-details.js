@@ -3,6 +3,7 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
 
 export default function TreatmentDetails({data}) {
     const {html} = data.markdownRemark
@@ -10,10 +11,10 @@ export default function TreatmentDetails({data}) {
 
 
     return (
-        <div>
-            <Typography>{title}</Typography>
-            <div dangerouslySetInnerHTML={{__html:html}}/>
-        </div>
+        <Container maxWidth="md">
+            {/* <Typography>{title}</Typography> */}
+            <Typography dangerouslySetInnerHTML={{__html:html}}/>
+        </Container>
     )
 }
 

@@ -1,7 +1,7 @@
 ---
 title: Cellulose Removal
 slug: cellulose-removal
-thumb: ../images/thumbs/inspection-icon.jpg
+thumb: ../images/thumbs/termite-damage-rotten-wood-eat-nest-destroy-concept.jpg
 featuredImg: ../images/featured/construction-featured.jpg
 ---
 

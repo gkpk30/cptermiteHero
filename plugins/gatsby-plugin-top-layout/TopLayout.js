@@ -8,7 +8,7 @@ import Header from '../../src/components/Header'
 import Footer from '../../src/components/Footer'
 
 export default function TopLayout(props) {
-
+ 
   return (
     <React.Fragment>
       <Helmet>
@@ -21,9 +21,13 @@ export default function TopLayout(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
+        
         <Header />
+        {/* <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh', justifyContent: 'space-between'}}> */}
         {props.children}
+        {/* </div> */}
         <Footer/>
+        
       </ThemeProvider>
     </React.Fragment>
   );
