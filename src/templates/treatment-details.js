@@ -14,6 +14,7 @@ export default function TreatmentDetails({data}) {
         <Container maxWidth="md">
             {/* <Typography>{title}</Typography> */}
             <Typography dangerouslySetInnerHTML={{__html:html}}/>
+            {/* <Typography>{html}</Typography> */}
         </Container>
     )
 }

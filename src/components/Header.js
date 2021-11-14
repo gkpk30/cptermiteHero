@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 // import {Link} from 'gatsby'
+import { graphql, useStaticQuery } from "gatsby"
 import AppBar from '@mui/material/AppBar'
 // import Link from '@mui/material/Link'
 import Link from '../components/Link';
@@ -19,36 +20,113 @@ import Divider from '@mui/material/Divider';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { palette } from '@mui/system';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+// import AccountMenu from '../components/TreatmentMenu';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import Settings from '@mui/icons-material/Settings';
+import TreatmentDropDownMenuLinks from '../components/TreatmentDropDownMenuLinks';
+
+
+
+
 // const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 // const downIcon = ()=> <ArrowDropDownIcon/>
 
 const navigationLinks = [
-    {name: "Treatments", href:"/treatments/", endIcon:  ()=> <ArrowDropDownIcon/> },
+    {name: "Services", href:"/treatments/", endIcon:  ()=> <ArrowDropDownIcon/> },
     {name: "About Us", href: "/about"}, 
+    {name: "Termite Info", href: "/termiteinfo"},
     {name: "Contact", href: "/contact"},
-    {name: "Termite Info", href: "/termiteinfo"}
 ]
 
+// const treatmentLinks = [
+//     {name: , href:},
+// ]
+
+// const AccountMenu = (props, ref)=> (
+//         <Menu
+//         // ref={ref}
+//         anchorEl={props.anchorEl}
+//         open={props.open}
+//         onClose={props.handleClose}
+//         onClick={props.handleClose}
+//         PaperProps={{
+//           elevation: 0,
+//           sx: {
+//             overflow: 'visible',
+//             filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+//             mt: 1.5,
+//             '& .MuiAvatar-root': {
+//               width: 32,
+//               height: 32,
+//               ml: -0.5,
+//               mr: 1,
+//             },
+//             '&:before': {
+//               content: '""',
+//               display: 'block',
+//               position: 'absolute',
+//               top: 0,
+//               right: 14,
+//               width: 10,
+//               height: 10,
+//               bgcolor: 'background.paper',
+//               transform: 'translateY(-50%) rotate(45deg)',
+//               zIndex: 0,
+//             },
+//           },
+//         }}
+//         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+//         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+//       >
+//         <Divider />
+//         <MenuItem>
+//           Add another account
+//         </MenuItem>
+//         <MenuItem>
+//           <ListItemIcon>
+//             <Settings fontSize="small" />
+//           </ListItemIcon>
+//           Settings
+//         </MenuItem>
+        
+//       </Menu>
+//       )
 
 
 
 export default function Header({location}) {
-    const [selectedTab, setSelectedTab] = useState(null)
+    // const [selectedTab, setSelectedTab] = useState(null)
     
-    const handleClickTab = (e, newValue) => {
-        setSelectedTab(newValue);
-        console.log(e)
-    }
+    // const handleClickTab = (e, newValue) => {
+    //     setSelectedTab(newValue);
+    //     console.log(e)
+    // }
+    // .MuiList-root-MuiMenu-list {
+    //     color:red;
+    // }
   
+    const [openDrawer, setOpenDrawer] = React.useState(false)
 
-    
+    //DropDown Menu***********************//
+        const [anchorEl, setAnchorEl] = React.useState(null);
+        const open = Boolean(anchorEl);
+        const handleClick = (event) => {
+            setAnchorEl(event.currentTarget);
+            console.log('click Handled Menu drop down, handleClick to open')
+        };
+        const handleClose = () => {
+            setAnchorEl(null);
+            console.log('handleClose Clicked')
+        };
+  //**************************************** */
 
-    const [openDrawer, setOpenDrawer] = useState(false)
+
 
     //console.log("Location: ", location.pathname)
     
@@ -79,27 +157,67 @@ export default function Header({location}) {
                             </Tabs> */}  
                                 {navigationLinks.map(link => (
                                      (link.endIcon) ? 
-                                     <Box key={link.name} >
-                                        <Link 
+                                     <div key={link.name}>
+                                        <Box  >
+                                            <Link 
+                                                    
+                                                    underline="none"  
+                                                    sx={{color: 'text.secondary', fontWeight: 'medium', fontSize:'.72rem'}}  
+                                                    // variant="text" 
+                                                    to={link.href}
+                                                    // endIcon={<ArrowDropDownIcon/>}
+                                                    // endIcon={downIcon()}
+                                                    // endIcon={link.endIcon()}
+                                                    // component={Button}
+                                                >
+                                                    {link.name}
+                                                </Link> 
+                                                <IconButton disableRipple={true} aria-label="menu" sx={{color:'text.secondary', px:'0'}} onClick={handleClick}  >{link.endIcon()}</IconButton>
+                                            </Box>
+                                            {/* <AccountMenu open={open} anchorEl={anchorEl} onClose={handleClose} onClick={handleClose}/> */}
+                                            <Menu
+                                                anchorEl={anchorEl}
+                                                open={open}
+                                                onClose={handleClose}
+                                                onClick={handleClose}  
                                                 
-                                                underline="none"  
-                                                sx={{color: 'text.secondary', fontWeight: 'medium', fontSize:'.8rem'}}  
-                                                // variant="text" 
-                                                to={link.href}
-                                                // endIcon={<ArrowDropDownIcon/>}
-                                                // endIcon={downIcon()}
-                                                // endIcon={link.endIcon()}
-                                                // component={Button}
+                                                sx={{
+                                                    '& ul.MuiList-root.MuiList-padding': {padding: '0px'},
+                                                  
+                                                }}
+
+                                                PaperProps={{
+                                                elevation: 0,
+                                                sx: {
+                                                    overflow: 'visible',
+                                                    filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                                                    mt: 1.5,
+                                                    '&:before': {
+                                                    content: '""',
+                                                    display: 'block',
+                                                    position: 'absolute',
+                                                    top: 0,
+                                                    right: 35,
+                                                    width: 10,
+                                                    height: 10,
+                                                    bgcolor: 'background.paper',
+                                                    transform: 'translateY(-50%) rotate(45deg)',
+                                                    zIndex: 0,
+                                                    },
+                                                },
+                                                }}
+                                                transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                                                anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                                             >
-                                                {link.name}
-                                            </Link> 
-                                            <IconButton aria-label="menu" sx={{color:'text.secondary', pl:'1'}}  >{link.endIcon()}</IconButton>
-                                        </Box>
+                                                <TreatmentDropDownMenuLinks />
+                                         
+                                            </Menu>
+                                        </div>
                                         :
                                         <Link 
                                             key={link.name} 
                                             underline="none"  
-                                            sx={{color: 'text.secondary', fontWeight: 'medium', ml: 2, fontSize:'.75rem'}}  
+                                            sx={{color: 'text.secondary', fontWeight: 'medium', ml: 2, fontSize:'.72rem'}}  
                                             // variant="text" 
                                             to={link.href}
                                             // endIcon={<ArrowDropDownIcon/>}
@@ -122,7 +240,7 @@ export default function Header({location}) {
               </Container>
               <SwipeableDrawer  anchor="right" open={openDrawer} onOpen={()=> setOpenDrawer(true)} onClose={()=> setOpenDrawer(false)}>
                     <div>
-                        <IconButton onClick={() => setOpenDrawer(false)}>
+                        <IconButton  onClick={() => setOpenDrawer(false)}>
                             <ChevronRightIcon />
                         </IconButton>
                     </div>
@@ -153,3 +271,4 @@ export default function Header({location}) {
         </Box>
     )
 }
+
