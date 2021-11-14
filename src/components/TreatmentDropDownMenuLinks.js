@@ -97,7 +97,7 @@ function Content() {
                           //imgStyle={styles.img} //inline style doesn;t work
                           //opacity = {.4}
 
-                          // mix-blend-mode: multiply; 
+                         
                                                      
                                               
                       />
