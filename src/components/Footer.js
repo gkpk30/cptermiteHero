@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <Box sx={{backgroundColor:"primary.main", color: 'text.secondary'}}  >
             <Container maxWidth="md">
-                Im the footer 
+                
                 <Copyright siteName = {'gnkDesigns'}/>
            </Container>
         </Box>
