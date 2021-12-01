@@ -21,6 +21,7 @@ export default function AccountMenu(props, ref) {
     onClick={props.handleClose}
     PaperProps={{
       elevation: 0,
+      square: 'true',
       sx: {
         overflow: 'visible',
         filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',

@@ -43,7 +43,7 @@ export default function Index({data}) {
         
             <>
                 <Box maxWidth="100%" height='auto'>
-                    <StaticImage style={{width:'100%', height:'100%'}}  src="../images/house.png" alt="Free Estimate, Treatment Options, Warranty and Annual Inspection" objectFit="cover" />
+                    <StaticImage style={{width:'100%', height:'100%'}}  src="../../images/house.png" alt="Free Estimate, Treatment Options, Warranty and Annual Inspection" objectFit="cover" />
                 </Box>
                 {/* <Box maxWidth="100%" height='auto'>
                     <StaticImage style={{width:'100%', height:'100%'}}  src="../../images/house.png" alt="Free Estimate, Treatment Options, Warranty and Annual Inspection" objectFit="cover" />
@@ -126,7 +126,7 @@ export const query = graphql`
           title
           thumb {
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, height: 210)
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, height: 210, width: 345)
             }
           }
         }

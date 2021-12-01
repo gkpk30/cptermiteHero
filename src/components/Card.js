@@ -13,7 +13,7 @@ export default function CustomCard(props) {
         <Card sx={{ maxWidth: 345 }} >
       <CardActionArea component={Link} to={props.slug} >
          
-          <GatsbyImage image={props.thumbImage} alt={props.title} />
+          <GatsbyImage  image={props.thumbImage} alt={props.title} />
       
         <CardContent  >
           <Typography gutterBottom variant="h5" component="div">

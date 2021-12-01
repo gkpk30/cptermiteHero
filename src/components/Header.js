@@ -158,7 +158,7 @@ export default function Header({location}) {
                                 {navigationLinks.map(link => (
                                      (link.endIcon) ? 
                                      <div key={link.name}>
-                                        <Box  >
+                                        <Box pb={'3px'}  >
                                             <Link 
                                                     
                                                     underline="none"  
@@ -173,7 +173,7 @@ export default function Header({location}) {
                                                     {link.name}
                                                 </Link> 
                                                 <IconButton disableRipple={true} aria-label="menu" sx={{color:'text.secondary', px:'0'}} onClick={handleClick}  >{link.endIcon()}</IconButton>
-                                            </Box>
+                                        </Box>
                                             {/* <AccountMenu open={open} anchorEl={anchorEl} onClose={handleClose} onClick={handleClose}/> */}
                                             <Menu
                                                 anchorEl={anchorEl}
@@ -183,11 +183,12 @@ export default function Header({location}) {
                                                 
                                                 sx={{
                                                     '& ul.MuiList-root.MuiList-padding': {padding: '0px'},
-                                                  
+                                                    '.MuiMenu-paper' : {borderRadius: '0px'},
                                                 }}
 
                                                 PaperProps={{
                                                 elevation: 0,
+                                                
                                                 sx: {
                                                     overflow: 'visible',
                                                     filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',

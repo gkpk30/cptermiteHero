@@ -47,9 +47,12 @@ export default function HeroSection() {
 
     return (
         <Paper 
-        sx={heroSection} 
+        sx={heroSection}
+        square={true} 
         >
-            <StaticImage src= "../images/imageMesh.jpg" alt=""  eager="true" placeholder="blurred" objectFit="fill"  
+            <StaticImage src= "../images/imageMesh.jpg" alt=""  eager="true" placeholder="blurred" 
+                // objectFit="none" 
+                layout='constrained' 
                 style={{
                         height:'100%', 
                         width: '100%', 

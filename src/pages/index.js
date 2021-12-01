@@ -10,13 +10,12 @@ import Paper from '@mui/material/Paper';
 import CustomCard from '../components/Card'
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
-import QuiltedImageList from '../components/QuiltedImageList'
 
 
 export default function Index() {
   return (
  
-    <>
+    <div>
       <HeroSection/>
       {/* <Container maxWidth="md">
         <Paper sx={{backgroundColor:"primary.main", height:'auto', p:2}}>
@@ -33,6 +32,6 @@ export default function Index() {
         </Paper>
       </Container> */}
       
-    </>
+    </div>
   );
 }

@@ -15,9 +15,7 @@ import { padding } from '@mui/system';
 import Button from '@mui/material/Button'
 
 
-const imageStyle= {
-  opacity: '.5',
-}
+
 
 function Content() {
   
@@ -87,7 +85,7 @@ function Content() {
                           layout='constrained'
                           width={347}
                           height={290}
-                          backgroundColor='#3e2730'
+                          backgroundColor='#2e2528'
                           // style={{opacity:'.4'}} styles outer wrapper  gatsby-image-wrapper
                           //imgClassName = {imageStyle} //comes back as class = {object Object}
                             //imgClassName = {'opacity: .4'} //comes back as a class = 'opacity: .4'
@@ -101,6 +99,11 @@ function Content() {
                                                      
                                               
                       />
+                      <Box style={{position: 'absolute', top: '50px', left: '25px', zIndex: 2, }}>
+                        <Typography variant= 'body' color='white'>
+                        We want your Home or Business to grow
+                        </Typography>
+                      </Box>
                   <Box style={{position: 'absolute', top: '115px', left: '25px', zIndex: 2, }}>
                     <Button component={Link} to={'/about'} variant="outlined" color="third" size="large"  >Why Us</Button>
                   </Box>
