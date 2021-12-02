@@ -27,4 +27,6 @@ Used in spot treatments, foam treatments and preventative treatments the environ
 
 <mark>We use Timbor</mark> and Bora-Care in it's liquid form which provides a better application as we broadcast the spray over the wood. This treatment method is a well–established technology with a proven track record – treated wood has been used safely and effectively around the world for over 60 years. It's an appropriate choice to protect indoor wood products from wood–destroying termites, carpenter ants, powderpost beetles, mold and fungi.
 
+
+
 <p class="red">red text</p>
