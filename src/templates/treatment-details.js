@@ -17,7 +17,7 @@ export default function TreatmentDetails({data}) {
             <Typography dangerouslySetInnerHTML={{__html:html}}/>
             {/* <Typography>{html}</Typography> */}
             <Divider/>
-            <Typography mt={2} fontWeight="500" variant="h4" sx={{fontStyle: 'italic', lineHeight: '1.25'}} >
+            <Typography mt={2} fontWeight="500" variant="h5" sx={{fontStyle: 'italic', lineHeight: '1.25'}} >
             We believe in fundamental honesty. It's the keystone of our business.
             </Typography>
             <Typography>
@@ -33,6 +33,11 @@ export default function TreatmentDetails({data}) {
             </Typography>
             <Typography mt={2} fontWeight="500" variant="h5" sx={{fontStyle: 'italic', lineHeight: '1.25'}} >
             Call us to setup an appointment for your FREE estimate today. <strong><br/> (818) 822-6782 <br/> 8am-8pm / 7 days a week </strong>
+            </Typography>
+            <Divider/>
+            <Typography>Coupon area and who we serve, Los Angeles etc, and HoA </Typography>
+            <Typography>
+            WE WELCOME: Residential | Commercial | Property Management| Homeowners Associations | Senior Homes | Construction Companies
             </Typography>
         </Container>
     )
