@@ -48,9 +48,12 @@ export default function About() {
         }} 
       />
       </Box>
-      <Typography variant="body2">
-        Our owner is a veteran of the United States Navy and is proud to support all vetarans.  If you are a veteran or have a United States service member in your family you will receive a $100 discount on Captain Termite Control services.
-      </Typography>
+      <Box width="90%" margin='auto' >
+        <Typography variant="body2">
+          Our owner is a veteran of the United States Navy and is proud to support all vetarans.  If you are a veteran or have a United States service member in your family you will receive a $100 discount on Captain Termite Control services.
+        </Typography>
+      </Box>
+      
       <Timeline/>
     </Container>
   );

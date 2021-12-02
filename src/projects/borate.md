@@ -1,7 +1,7 @@
 ---
 title: Borate Treatment
 slug: borate
-thumb: ../images/thumbs/construction.jpg
+thumb: ../images/thumbs/globe.png
 featuredImg: ../images/featured/construction-featured.jpg
 ---
 <!-- <style>

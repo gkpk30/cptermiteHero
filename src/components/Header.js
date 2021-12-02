@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import * as styles from '../styles/header.module.css'
 // import {Link} from 'gatsby'
 import { graphql, useStaticQuery } from "gatsby"
 import AppBar from '@mui/material/AppBar'
@@ -100,6 +101,7 @@ const navigationLinks = [
 
 
 
+
 export default function Header({location}) {
     // const [selectedTab, setSelectedTab] = useState(null)
     
@@ -144,17 +146,10 @@ export default function Header({location}) {
     return (
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static" enableColorOnDark color="primary" > 
-              <Container maxWidth='md' disableGutters >
+              <Container maxWidth='lg' disableGutters >
                  <Toolbar >
                  <Typography component={Link} to='/' sx={{color: 'text.secondary', marginRight:'auto'}} >Captain Termite Control </Typography>
                      <Hidden smDown>
-                        
-                            
-                            {/* <Tabs value={selectedTab} onChange={handleClickTab} indicatorColor = 'secondary'   >
-                                <Tab label="Treatments" component={Link} to="/treatments" />
-                                <Tab label="About Us" component={Link} to="/about"  />
-                                <Tab label="Contact" component={Link} to="/contact"  />
-                            </Tabs> */}  
                                 {navigationLinks.map(link => (
                                      (link.endIcon) ? 
                                      <div key={link.name}>
@@ -162,16 +157,17 @@ export default function Header({location}) {
                                             <Link 
                                                     
                                                     underline="none"  
-                                                    sx={{color: 'text.secondary', fontWeight: 'medium', fontSize:'.72rem'}}  
+                                                    sx={{color: 'text.secondary', fontWeight: 'medium', fontSize:'.72rem', p:2}}  
                                                     // variant="text" 
                                                     to={link.href}
                                                     // endIcon={<ArrowDropDownIcon/>}
                                                     // endIcon={downIcon()}
                                                     // endIcon={link.endIcon()}
                                                     // component={Button}
+                                                    activeClassName={styles.active_header_link}
                                                 >
                                                     {link.name}
-                                                </Link> 
+                                            </Link> 
                                                 <IconButton disableRipple={true} aria-label="menu" sx={{color:'text.secondary', px:'0'}} onClick={handleClick}  >{link.endIcon()}</IconButton>
                                         </Box>
                                             {/* <AccountMenu open={open} anchorEl={anchorEl} onClose={handleClose} onClick={handleClose}/> */}
@@ -218,9 +214,10 @@ export default function Header({location}) {
                                         <Link 
                                             key={link.name} 
                                             underline="none"  
-                                            sx={{color: 'text.secondary', fontWeight: 'medium', ml: 2, fontSize:'.72rem'}}  
+                                            sx={{color: 'text.secondary', fontWeight: 'medium', ml: 2, fontSize:'.72rem', p:2}}  
                                             // variant="text" 
                                             to={link.href}
+                                            activeClassName={styles.active_header_link}
                                             // endIcon={<ArrowDropDownIcon/>}
                                             // component={Button}
                                             

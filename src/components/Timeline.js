@@ -18,7 +18,7 @@ export default function CustomizedTimeline() {
   return (
       <Box mt={8}>
         <Typography variant="h4" sx={{textAlign: 'center'}}>What to Expect</Typography>
-        <Timeline position="alternate">
+        <Timeline position="right">
             <TimelineItem>
                 <TimelineOppositeContent
                 sx={{ m: 'auto 0' }}
