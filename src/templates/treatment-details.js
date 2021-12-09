@@ -5,54 +5,99 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Divider from '@mui/material/Divider'
+import Grid from '@mui/material/Grid'
+import CustomCard from '../components/Card'
+import BottomContent from '../components/BottomContent'
+
+
 
 export default function TreatmentDetails({data}) {
     const {html} = data.markdownRemark
-    const {title} = data.markdownRemark.frontmatter
-
+    // const {title} = data.markdownRemark.frontmatter
+    const treatments = data.allMarkdownRemark.nodes 
+    const slugName= data.allMarkdownRemark.nodes[0].frontmatter.slug
+    console.log('slugName: ', slugName)
 
     return (
         <Container maxWidth="md">
-            {/* <Typography>{title}</Typography> */}
-            <Typography dangerouslySetInnerHTML={{__html:html}}/>
-            {/* <Typography>{html}</Typography> */}
+        
+            <Typography component="span" dangerouslySetInnerHTML={{__html:html}}/>
+            
             <Divider/>
-            <Typography mt={2} fontWeight="500" variant="h5" sx={{fontStyle: 'italic', lineHeight: '1.25'}} >
-            We believe in fundamental honesty. It's the keystone of our business.
-            </Typography>
-            <Typography>
-            Captain Termite Control, Inc. will only use the best equipment and products available today. We offer a variety of localized treatment options.
-            We will get the job done right no matter the type of termite, location, size or extent of your infestation. 
-            </Typography>
-            <Typography>
-                We believe in alternative treatments that fit your lifestyle and that are cost effective. Most structures
-                that have infestations can be controlled without the use of highly toxic chemicals. If necessary, Captain Termite Control Inc can also recommend a traditional tent fumigation option
-            </Typography>
-            <Typography>
-                When dealing with unwanted termites or taking preventative actions, Captain Termite Control, Inc. will provide effective and affordable termite control solutions to prevent costly damage to your property.
-            </Typography>
-            <Typography mt={2} fontWeight="500" variant="h5" sx={{fontStyle: 'italic', lineHeight: '1.25'}} >
-            Call us to setup an appointment for your FREE estimate today. <strong><br/> (818) 822-6782 <br/> 8am-8pm / 7 days a week </strong>
-            </Typography>
-            <Divider/>
-            <Typography>Coupon area and who we serve, Los Angeles etc, and HoA </Typography>
-            <Typography>
-            WE WELCOME: Residential | Commercial | Property Management| Homeowners Associations | Senior Homes | Construction Companies
-            </Typography>
+
+            <BottomContent/>
+
+
+            <Box mt={4}>
+                    <Typography variant='h4' component='h1'>
+                        We have you covered at Captain Termite Control
+                  </Typography>
+                  <Typography variant="h5" component="h3">Check out more services we have to offer</Typography>
+                        
+                        <Grid sx={{mt:4}} container  spacing={2} justifyContent='center'   direction='row'>
+                            {treatments.map(treatment=> (
+                                <Grid item key={treatment.id}>
+                                    <CustomCard treatment={treatment}
+                                        maxWidth={245}
+                                        title={treatment.frontmatter.title}
+                                        slug={'../' + treatment.frontmatter.slug}
+                                        excerpt={treatment.excerptAst.children[2].children[0].value}
+                                        timeToRead={treatment.timeToRead}
+                                        thumbnail={treatment.thumb}
+                                        thumbImage={treatment.frontmatter.thumb.childImageSharp.gatsbyImageData}
+                                    />
+                                </Grid>
+                            ))}    
+                        </Grid>
+            </Box>
         </Container>
     )
 }
 
-export const query = graphql`
-    query TreatmentDetails($slug: String) {
-        markdownRemark(frontmatter: {slug: {eq: $slug}}) {
-            html
-            frontmatter{
-                title
-                slug
-            }
-        }
-    }
+// export const query = graphql`
+//     query TreatmentDetails($slug: String) {
+//        markdownRemark(frontmatter: {slug: {eq: $slug}}) {
+//             html
+//             frontmatter{
+//                 title
+//                 slug
+//             }
+//         }
+//     }
+    
 
+// `
+
+export const query = graphql`
+query TreatmentDetails($slug: String) {
+    markdownRemark(frontmatter: {slug: {eq: $slug}}) {
+      html
+      frontmatter {
+        title
+        slug
+      }
+    }
+    allMarkdownRemark {
+      nodes {
+        frontmatter {
+          slug
+          title
+          thumb {
+            childImageSharp {
+              gatsbyImageData(
+                layout: CONSTRAINED
+                placeholder: BLURRED
+                width: 345
+                height: 210
+              )
+            }
+          }
+        }
+        timeToRead
+        id
+        excerptAst(pruneLength: 100)
+      }
+    }
+  }
 `
 

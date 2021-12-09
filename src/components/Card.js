@@ -9,8 +9,9 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import {Link} from 'gatsby'
 
 export default function CustomCard(props) {
+  const maxWidth= props.maxWidth || 345
     return (
-        <Card sx={{ maxWidth: 345 }} >
+        <Card sx={{ maxWidth: maxWidth }} >
       <CardActionArea component={Link} to={props.slug} >
          
           <GatsbyImage  image={props.thumbImage} alt={props.title} />

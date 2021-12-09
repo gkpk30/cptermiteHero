@@ -5,7 +5,7 @@ thumb: ../images/thumbs/tent800x534.jpg
 featuredImg: ../images/featured/tent.jpg
 ---
 
-### Traditional Tent Fumigation
+# Traditional Tent Fumigation
 
 Traditional Tent fumigation is an all inclusive treatment type against dry wood termites. We essentially bag your entire home, building or business. Tent fumigation is so effective that it is extremely rare to have recurring termite problems because it will most likely eliminate 100% of dry wood termites. We use Vakane gas when other termite companies use cheaper, inferior and less effective gas products.
 

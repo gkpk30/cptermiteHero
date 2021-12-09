@@ -4,7 +4,7 @@ slug: borate
 thumb: ../images/thumbs/globe.png
 featuredImg: ../images/featured/construction-featured.jpg
 ---
-<!-- <style>
+<style>
 mark{
     color:blue;
 }
@@ -20,8 +20,8 @@ mark{
 
 <style>
 .red {color: red}
-</style> -->
-### Borate Treatment
+</style>
+# Borate Treatment
 
 Used in spot treatments, foam treatments and preventative treatments the environmentally–benign borate preservatives dehydrate the termites and effectively eliminates them.
 
@@ -29,4 +29,4 @@ Used in spot treatments, foam treatments and preventative treatments the environ
 
 
 
-<p class="red">red text</p>
+<!-- <p class="red">red text</p> -->

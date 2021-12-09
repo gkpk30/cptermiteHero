@@ -8,8 +8,8 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Paper from '@mui/material/Paper';
 import CustomCard from '../../components/Card'
-
-
+import Divider from '@mui/material/Divider'
+import BottomContent from '../../components/BottomContent'
 
 
 
@@ -44,7 +44,7 @@ export default function Index({data}) {
                
 
                     
-                    <Box mt={4}>
+                    <Box my={4}>
                         <Grid container  spacing={2} justifyContent='center'   direction='row'>
                             {treatments.map(treatment=> (
                                 <Grid item key={treatment.id}>
@@ -60,8 +60,10 @@ export default function Index({data}) {
                             ))}    
                         </Grid>
                     </Box>
-                    
+
+                    <BottomContent/>
                 </Container>
+               
             </Box>
        
     )

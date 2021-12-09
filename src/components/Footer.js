@@ -5,7 +5,7 @@ import Box from '@mui/material/Box'
 
 export default function Footer() {
     return (
-        <Box sx={{backgroundColor:"primary.main", color: 'text.secondary', minHeight:'5vh'}}  >
+        <Box sx={{backgroundColor:"primary.main", color: 'text.secondary', }}  >
             <Container maxWidth="md">
                 
                 <Copyright siteName = {'gnkDesigns'}/>
