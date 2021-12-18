@@ -21,7 +21,9 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 
 const heroSection ={
-                height: '90vh',
+                height: '95vh',
+                // height: '1000px',
+                
                 position: 'relative',
                 // maxHeight: {
                 //     xs: '90%', // theme.breakpoints.up('xs')
@@ -51,8 +53,8 @@ export default function HeroSection() {
         square={true} 
         >
             <StaticImage src= "../images/imageMesh.jpg" alt=""  eager="true" placeholder="blurred" 
-                // objectFit="none" 
-                layout='constrained' 
+                // objectFit="cover" 
+                layout='fullWidth' 
                 style={{
                         height:'100%', 
                         width: '100%', 
@@ -79,7 +81,7 @@ export default function HeroSection() {
                                 We believe in fundamental honesty. It's the keystone of our business.
                             </Typography>
                             <Box my={8}>
-                                <Stack direction="row"  spacing={2}>
+                                <Stack direction="row"   spacing={2}>
                                     <Button component={Link} to="/about" variant="contained" sx={{borderRadius: 4}} color='primary' endIcon={<ArrowForwardIosIcon/>}>Learn More</Button>
                                     <Button component={Link} to="/contact"variant="contained" sx={{borderRadius: 4,}} color='third' endIcon={<ArrowForwardIosIcon/>}>Contact Us</Button>
                                 </Stack>

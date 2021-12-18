@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { StaticImage } from 'gatsby-plugin-image'
 import ProfilePic from '../components/ProfilePic'
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -43,7 +42,7 @@ import Timeline from '../components/Timeline';
 export default function About() {
   return (
     <Container maxWidth="md">
-      <Box sx={{ my: 4 }}>
+      <Box sx={{ my: 4 }} >
         <Typography variant="h4" component="h1" gutterBottom>
         Our Mission is to provide the highest level of service at affordable prices
         </Typography>

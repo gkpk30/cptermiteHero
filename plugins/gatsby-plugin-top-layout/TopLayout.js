@@ -21,13 +21,13 @@ export default function TopLayout(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        
+        <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh', justifyContent: 'space-between'}}>
         <Header />
-        {/* <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh', justifyContent: 'space-between'}}> */}
-        {props.children}
-        {/* </div> */}
-        <Footer/>
         
+        {props.children}
+        
+        <Footer/>
+        </div>
       </ThemeProvider>
     </React.Fragment>
   );

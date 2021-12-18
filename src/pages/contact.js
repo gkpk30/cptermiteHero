@@ -21,7 +21,7 @@ export default function Contact() {
       setPropertyType(event.target.value);
     };
     return (
-        <Box >
+        <Box mt={{xs:4, sm: 6, md:10}} >
                 <Container maxWidth="md">
                 <Typography color="text.primary" elevation={3}   variant="h5">
                     Find out if your home or business has a termite infestation. Call us for a FREE inspection.

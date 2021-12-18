@@ -214,7 +214,7 @@ export default function Header({location}) {
                                         <Link 
                                             key={link.name} 
                                             underline="none"  
-                                            sx={{color: 'text.secondary', fontWeight: 'medium', ml: 2, fontSize:'.72rem', p:2}}  
+                                            sx={{color: 'text.secondary', fontWeight: 'medium', ml: 1, fontSize:'.72rem', p:2}}  
                                             // variant="text" 
                                             to={link.href}
                                             activeClassName={styles.active_header_link}

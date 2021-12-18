@@ -18,16 +18,82 @@ export default function CustomizedTimeline() {
   return (
       <Box mt={8}>
         <Typography variant="h4" sx={{textAlign: 'center'}}>What to Expect</Typography>
-        <Timeline position="right">
+
+        <Timeline 
+        position="right"
+        // sx={{
+        //     '& ul.MuiList-root.MuiList-padding': {padding: '0px'},
+        //     '.MuiTimelineItem-missingOppositeContent' : {content: 'none' },
+        // }}
+        >
+      <TimelineItem sx={{'MuiTimelineItem-root:before': {content:'none'}}}>
+        <TimelineSeparator>
+          <TimelineDot />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Typography  variant="h6" component="span">
+                Inspection Visit
+            </Typography>
+            <Typography>Captain Termite Control Inc. will inspect all accessible areas of your property. 
+                That includes the exteriors, underneath your home, and in the attic. With 25 years' 
+                experience you can trust that he'll do a thorough job
+            </Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+                <Typography  variant="h6" component="span">
+                    Free Estimate
+                </Typography>
+                <Typography>
+                     The Captain will go over your treatment plan and schedule a treatment
+                     date at your convenience. Some treatments can take several hours to several 
+                     days. All estimates are valid for 30 days
+                </Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Typography variant="h6" component="span">
+                    Two Year Warranty
+            </Typography>
+            <Typography>Most treatments will come with a 2 year warranty. Captain will come out to inspect your property annually for the next two years.</Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+                <Typography variant="h6" component="span">
+                    After 2nd Year
+                </Typography>
+                <Typography>We'll come out every year to inspect for re-infestations. Your exterior and interior treatments will continue for as long as you keep your warranty.</Typography>
+                </TimelineContent>
+      </TimelineItem>
+    </Timeline>
+
+        <Timeline
+            
+        >
             <TimelineItem>
-                <TimelineOppositeContent
+                {/* <TimelineOppositeContent
                 sx={{ m: 'auto 0' }}
                 align="right"
                 variant="body2"
                 color="text.secondary"
                 >
                 9:30 am
-                </TimelineOppositeContent>
+                </TimelineOppositeContent> */}
                 <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot>
@@ -43,13 +109,13 @@ export default function CustomizedTimeline() {
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
-                <TimelineOppositeContent
+                {/* <TimelineOppositeContent
                 sx={{ m: 'auto 0' }}
                 variant="body2"
                 color="text.secondary"
                 >
                 10:00 am
-                </TimelineOppositeContent>
+                </TimelineOppositeContent> */}
                 <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot color="primary">

@@ -27,7 +27,7 @@ console.log('termite data from graphql', data);
 
     return (
         <Container maxWidth="md" >
-            <Box mt={3}>
+            <Box  mt={{xs:3, sm: 8, md:16}}>
                 <Typography mb={2} variant="h4" component="h1"> DRYWOOD TERMITES</Typography>
                        
                 <Typography variant="h5" component="h2">
