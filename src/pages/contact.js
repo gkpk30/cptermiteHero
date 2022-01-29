@@ -57,7 +57,7 @@ export default function Contact() {
             </Box>
                     
                
-                <Box sx={{ minWidth: 120, maxWidth:500, margin:'auto' }}>
+                <Box  sx={{ minWidth: 120, maxWidth:500, m:1 }}>
         <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Your Property Type</InputLabel>
             <Select

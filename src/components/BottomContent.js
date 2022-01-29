@@ -30,7 +30,7 @@ export default function BottomContent() {
                   </Typography>
                   
                   
-                  <Typography>Coupon area and who we serve, Los Angeles etc, and HoA </Typography>
+                  <Typography my={1}>We Serve Los Angeles, San Fernando Valley, Toluca Lake, Hollywood Area</Typography>
                   <Typography>
                   WE WELCOME: Residential | Commercial | Property Management| Homeowners Associations | Senior Homes | Construction Companies
                   </Typography>

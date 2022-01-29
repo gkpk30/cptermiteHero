@@ -7,6 +7,7 @@ import ProTip from '../components/ProTip';
 import Link from '../components/Link';
 import Copyright from '../components/Copyright';
 import Timeline from '../components/Timeline';
+import BottomContent from '../components/BottomContent';
 
 // const ProfilePic = ()=> (
 
@@ -65,6 +66,7 @@ export default function About() {
       
       
       <Timeline/>
+      <BottomContent/>
     </Container>
   );
 }

@@ -14,6 +14,8 @@ import HotelIcon from '@mui/icons-material/Hotel';
 import RepeatIcon from '@mui/icons-material/Repeat';
 import Typography from '@mui/material/Typography';
 
+
+
 export default function CustomizedTimeline() {
   return (
       <Box mt={8}>
@@ -21,12 +23,13 @@ export default function CustomizedTimeline() {
 
         <Timeline 
         position="right"
-        // sx={{
-        //     '& ul.MuiList-root.MuiList-padding': {padding: '0px'},
-        //     '.MuiTimelineItem-missingOppositeContent' : {content: 'none' },
-        // }}
+        
+        sx={{
+          '.MuiTimelineItem-root::before': {flex:'.1'}
+         //changed the above from flex:1 to flex:.1 so that it shifts the Timeline away from center and instead sends it outward filling the space more
+         }}
         >
-      <TimelineItem sx={{'MuiTimelineItem-root:before': {content:'none'}}}>
+      <TimelineItem  >
         <TimelineSeparator>
           <TimelineDot />
           <TimelineConnector />
