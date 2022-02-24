@@ -16,7 +16,7 @@ export default function BottomContent() {
               </Typography>
               <Typography>
                   We believe in alternative treatments that fit your lifestyle and that are cost effective. Most structures
-                  that have infestations can be controlled without the use of highly toxic chemicals. If necessary, Captain Termite Control Inc can also recommend a traditional tent fumigation option
+                  that have infestations can be controlled without the use of highly toxic chemicals. If necessary, Captain Termite Control Inc can also recommend a traditional tent fumigation option.
               </Typography>
               <Typography>
                   When dealing with unwanted termites or taking preventative actions, Captain Termite Control, Inc. will provide effective and affordable termite control solutions to prevent costly damage to your property.

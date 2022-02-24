@@ -18,7 +18,9 @@
     "gatsby-transformer-sharp": "^3.14.0",
     "react": "latest",
     "react-dom": "latest",
-    "react-helmet": "latest"
+    "react-helmet": "latest",
+    "react-hook-form": "^7.26.0",
+    "sharp": "^0.30.0"
   },
   "scripts": {
     "develop": "gatsby develop",

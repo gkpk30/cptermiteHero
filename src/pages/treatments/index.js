@@ -6,9 +6,7 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
-import Paper from '@mui/material/Paper';
 import CustomCard from '../../components/Card'
-import Divider from '@mui/material/Divider'
 import BottomContent from '../../components/BottomContent'
 
 

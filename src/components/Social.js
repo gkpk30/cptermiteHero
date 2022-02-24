@@ -1,11 +1,10 @@
 import React from 'react'
-import Icon from '@mui/material/Icon';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton'
 import RedditIcon from '@mui/icons-material/Reddit';
-import Link from '@mui/material/Link';
+
 
 const socialItems =[
     {icon: FacebookIcon, url: 'https://www.facebook.com'},

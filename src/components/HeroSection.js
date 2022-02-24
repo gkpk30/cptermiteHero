@@ -20,8 +20,10 @@ import InfoGlass from './InfoGlass'
 import { StaticImage } from 'gatsby-plugin-image'
 
 
+
 const heroSection ={
                 height: '95vh',
+
                 // height: '1000px',
                 
                 position: 'relative',
@@ -99,6 +101,7 @@ export default function HeroSection() {
                 </Grid>
                 
             </Container>
+          
         </Paper>
     )
 }

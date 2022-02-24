@@ -17,6 +17,11 @@ export default function TopLayout(props) {
           href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
           rel="stylesheet"
         />
+        <meta name="google-site-verification" content="M6oHkqrPTAoH48Kxdx1CPoMdT_FENFQhwqrvac6BQj0"/>
+        <meta name="description" content="Captain Termite Control INC. is a family owned and operated company providing effective and preventative termite treatments in Los Angeles, California. Our mission is to provide the highest level of service at affordable prices. Whether it's your home or business we can protect your investment by ridding your property of unwanted termites."/>
+        <meta name="keywords" content="Termite Inspection, Free Inspection, Termites, Los Angeles County, Orange County"/>
+        <title>Captain Termite Control | Los Angeles Termite Control Company</title>
+          
       </Helmet>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

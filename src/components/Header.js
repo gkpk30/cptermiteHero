@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import * as styles from '../styles/header.module.css'
 // import {Link} from 'gatsby'
-import { graphql, useStaticQuery } from "gatsby"
 import AppBar from '@mui/material/AppBar'
 // import Link from '@mui/material/Link'
 import Link from '../components/Link';
@@ -12,23 +11,15 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import Tab from '@mui/material/Tab'
-import Tabs from '@mui/material/Tabs'
-import Grid from '@mui/material/Grid'
 import Hidden from '@mui/material/Hidden'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Divider from '@mui/material/Divider';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import { palette } from '@mui/system';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 // import AccountMenu from '../components/TreatmentMenu';
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Settings from '@mui/icons-material/Settings';
 import TreatmentDropDownMenuLinks from '../components/TreatmentDropDownMenuLinks';
 
 
