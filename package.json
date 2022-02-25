@@ -1,6 +1,6 @@
 {
   "name": "gatsby",
-  "version": "4.0.0",
+  "version": "3.0.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "latest",
@@ -10,9 +10,9 @@
     "@mui/lab": "^5.0.0-alpha.51",
     "@mui/material": "latest",
     "gatsby": "latest",
-    "gatsby-plugin-image": "^1.14.0",
+    "gatsby-plugin-image": "^1.14.2",
     "gatsby-plugin-react-helmet": "latest",
-    "gatsby-plugin-sharp": "^3.14.0",
+    "gatsby-plugin-sharp": "^3.14.3",
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-transformer-remark": "^4.11.0",
     "gatsby-transformer-sharp": "^3.14.0",
