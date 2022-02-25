@@ -27,4 +27,7 @@ module.exports = {
   siteMetadata: {
     title: 'My page',
   },
+  flags: {
+    PARALLEL_QUERY_RUNNING: true
+  }
 };
