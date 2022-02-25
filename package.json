@@ -27,5 +27,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+  },
+  "devDependencies": {
+    "gatsby-plugin-netlify": "^4.1.0"
   }
 }
