@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useForm} from "react-hook-form"
+import {useForm,useFieldArray, Controller } from "react-hook-form"
 import Stack from '@mui/material/Stack'
 import Paper from '@mui/material/Paper'
 import Box from '@mui/material/Box'
@@ -12,9 +12,13 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 
+
+
 export default function ContactForm1() {
 
-    const propertyTypes =['Residential', 'Commercial', 'HOA', 'Construction', 'Other']
+  
+
+    const propertyTypes =['Residential', 'Commercial', 'HOA', 'In Construction', 'Other']
     const [propertyType, setPropertyType] = useState('')
     
    
@@ -22,16 +26,71 @@ export default function ContactForm1() {
       setPropertyType(event.target.value);
     };
 
+    const [successMessage, setSuccessMessage] = useState(<Typography id='contact-message' mb={2} gutterBottom color="textSecondary" variant="body2" component="p" >We will keep your information private. Our team will get back to you within 24 hours.</Typography>);
+  // setSuccessMessage(<Typography id='contact-message' mb={2} gutterBottom color="textSecondary" variant="body2" component="p" >We will keep your information private. Our team will get back to you within 24 hours.</Typography>);
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+
+    const { register, control, handleSubmit, reset, formState, formState: { isSubmitSuccessful} } = useForm({
+      defaultValues: { 
+        Name: "", 
+        Phone: "", 
+        Email: "",
+        propertyType: "",
+        Message: ""
+
+      }
+    });
+    const [submittedData, setSubmittedData] = React.useState({});
+    // const onSubmit = data => console.log(data, propertyType);
     // console.log(errors);
+
+    const onSubmit = (data) => {
+      setSubmittedData(data);
+      fetch("https://formsubmit.co/ajax/671ed65e8b3f25f7416b378a329663b3 ", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            // name: "FormSubmit",
+            // message: "I'm from Devro LABS"
+            name: data.Name,
+            email:data.Email,
+            Phone: data.Phone,
+            Property: propertyType,
+            Message: data.Message
+
+        })
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(errors => console.log(errors));
+    }
+
+    React.useEffect(() => {
+      if (formState.isSubmitSuccessful){
+        reset({Name: "", 
+        Phone: "", 
+        Email: "",
+        PropertyType: setPropertyType(''),
+        Message: ""})
+        setSuccessMessage(<Typography mb={2} gutterBottom color="success.main" variant="h6" component="p" >THANK YOU! We Received Your Request. Our team will get back to you within 24 hours. </Typography>)
+      }
+
+    }, [formState, submittedData, reset]);
+
+    
+
+
   return (
   
   <Box>
       <Paper sx={{p:3, maxWidth: '600px', margin: 'auto'}} >
         <Typography variant="h5" >Contact Us</Typography>
-        <Typography mb={2} gutterBottom color="textSecondary" variant="body2" component="p" >We will keep your information private. Our team will get back to you within 24 hours.</Typography>
+        <Box>{successMessage}</Box>
+        {/* <Typography  mb={2} gutterBottom color="textSecondary" variant="body2" component="p" >We will keep your information private. Our team will get back to you within 24 hours.</Typography> */}
+       
         <form onSubmit={handleSubmit(onSubmit)} >
             <Stack spacing={3}>
                 <TextField
@@ -55,7 +114,7 @@ export default function ContactForm1() {
                 label="phone number"
                 placeholder="Phone Number"
                 inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-                {...register("Phone number", {required: true, minLength: 6, maxLength: 12})}
+                {...register("Phone", {required: true, minLength: 6, maxLength: 12})}
                
                 />
                 
@@ -79,7 +138,7 @@ export default function ContactForm1() {
                 multiline
                 rows={4}
                 placeholder="How Can We Help You?"
-                {...register("Message", {required: false, maxLength: 200})}
+                {...register("Message", {required: true, maxLength: 200})}
                 
             />
                 <Button type="submit" variant="contained" color="primary">Submit</Button>

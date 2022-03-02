@@ -20,9 +20,8 @@ import InfoGlass from './InfoGlass'
 import { StaticImage } from 'gatsby-plugin-image'
 
 
-
 const heroSection ={
-                height: '95vh',
+                height: '90vh',
 
                 // height: '1000px',
                 
@@ -68,7 +67,7 @@ export default function HeroSection() {
                 <Grid 
                         container 
                         alignItems="center" 
-                        justifyContent="space-between"
+                        justifyContent="space-around"
                         sx={{height:'100%', position: 'relative', zIndex: '100'}}
                         >
                    <Grid item xs={12}  >
@@ -76,12 +75,23 @@ export default function HeroSection() {
                    </Grid>
                     <Zoom in={shouldShow}>
                         <Grid item sm={8} xs={12}>
-                            <Typography fontWeight="700" component="h1" variant="h3" sx={{lineHeight: '1'}} >
-                                Effective Termite Control Solutions
-                            </Typography>
-                            <Typography mt={2} fontWeight="500" variant="h5" sx={{fontStyle: 'italic', lineHeight: '1.25'}}  >
-                                We believe in fundamental honesty. It's the keystone of our business.
-                            </Typography>
+                            <StaticImage src= "../images/website_logo_transparent_600X400.png" alt="captain termite control logo"  eager="true" placeholder="blurred" 
+                                // objectFit="cover" 
+                                layout='fullWidth' 
+                                style={{
+                                        // height:'80%', 
+                                        width: '35%',  
+                                        zIndex: '1', 
+                                    }}  
+                            />
+                            <Box mt={{xs:2, sm: 3, md:5}}>
+                                <Typography fontWeight="700" component="h1" variant="h3" sx={{lineHeight: '1'}} >
+                                    Effective Termite Control Solutions
+                                </Typography>
+                                <Typography mt={2} fontWeight="500" variant="h5" sx={{fontStyle: 'italic', lineHeight: '1.25'}}  >
+                                    We believe in fundamental honesty. It's the keystone of our business.
+                                </Typography>
+                            </Box>
                             <Box my={8}>
                                 <Stack direction="row"   spacing={2}>
                                     <Button component={Link} to="/about" variant="contained" sx={{borderRadius: 4}} color='primary' endIcon={<ArrowForwardIosIcon/>}>Learn More</Button>
