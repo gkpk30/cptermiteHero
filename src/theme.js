@@ -23,8 +23,9 @@ const theme = createTheme({
     },
     text: {
         primary: '#16204E',
-        secondary: grey[700],
+        secondary: grey[400],
         main: '#e4e5ea',
+        third: grey[700],
       },
   },
 //   palette: {

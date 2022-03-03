@@ -14,7 +14,7 @@ function LightBulbIcon(props) {
 
 export default function ProTip() {
   return (
-    <Typography sx={{ mt: 6, mb: 3 }} color="text.secondary">
+    <Typography sx={{ mt: 6, mb: 3 }} color="text.third">
       <LightBulbIcon sx={{ mr: 1, verticalAlign: 'middle' }} />
       Consumer tip: We offer a two year warranty on most projects. Review our treatment documentation <Link to="/treatments"> here.</Link> 
     </Typography>
