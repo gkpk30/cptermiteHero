@@ -10,8 +10,7 @@ export default function Index() {
  
     <div>
       <HeroSection/>
-   
-      
+    
     </div>
   );
 }

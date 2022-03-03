@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography'
 export default function InfoGlass() {
     return (
         <Box
-           
+           mb={{xs:4, sm: 6, md:10}}
             sx={{
                 background: 'rgba( 66, 94, 223, 0.15 )',
                 boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',

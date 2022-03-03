@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {StaticImage} from 'gatsby-plugin-image'
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -28,8 +29,32 @@ export default function TopLayout(props) {
         <CssBaseline />
         <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh', justifyContent: 'space-between'}}>
         <Header />
+        <div style={{display:'grid'}}>
+        <StaticImage 
+            style={{
+                gridArea:"1/1",
+            }}
+            layout="fullWidth"
+            src={"../images/imageMesh.jpg" }
+            alt=""  
+            eager="true" 
+            placeholder="blurred"
+            formats={["auto", "webp", "avif"]}
+            />
+
+        <div
+            style={{
+                gridArea:"1/1",
+                position: "relative",
+                // placeItems: "center",
+                display: "grid",   
+            }}
+        >
+           {/* place content here */}
+           {props.children}
+        </div>
+    </div>
         
-        {props.children}
         
         <Footer/>
         </div>

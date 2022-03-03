@@ -6,8 +6,7 @@ import ProfilePic from '../components/ProfilePic'
 import Typography from '@mui/material/Typography';
 import BottomContent from '../components/BottomContent';
 import Divider from '@mui/material/Divider'
-// import Form from '../components/Form'
-// import ContactForm from '../components/ContactForm'
+
 import ContactForm1 from '../components/ContactForm1'
 
 
@@ -33,60 +32,8 @@ export default function Contact() {
                     WE WELCOME: Residential | Commercial | Property Management| Homeowners Associations | Senior Homes | Construction Companies
                     </Typography>
 
-                    {/* <Form/> */}
-
-                    {/* <ContactForm/> */}
-
                     <ContactForm1/>
-
-                    
-                    
-                    {/* <Box
-            component="form"
-            sx={{
-                '& > :not(style)': { m: 1, width: '25ch' },
-            }}
-            noValidate
-            autoComplete="off"
-            >
-            <TextField 
-                required 
-                fullWidth  
-                id="outlined-basic" 
-                label="Name" 
-                variant="outlined" 
-                // helperText="Incorrect entry." 
-            />
-            <TextField 
-                required 
-                fullWidth  
-                id="outlined-basic" 
-                label="Zip Code" 
-                variant="outlined" 
-                // helperText="Incorrect entry." 
-            />
-            
-            </Box> */}
-                    
-               
-                {/* <Box  sx={{ minWidth: 120, maxWidth:500, m:1 }}>
-        <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Your Property Type</InputLabel>
-            <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={propertyType}
-            label="Your Property Type"
-            onChange={handlePropertyChoice}
-            >
-                {propertyTypes.map((type) => (
-                    <MenuItem key={type} value={type}>{type}</MenuItem>
-                ))
-                }
-            
-            </Select>
-        </FormControl>
-        </Box> */}
+    
         <Divider sx={{my:4}} />
         <ProfilePic/>
         <BottomContent/>
