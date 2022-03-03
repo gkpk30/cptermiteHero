@@ -23,7 +23,7 @@ const theme = createTheme({
     },
     text: {
         primary: '#16204E',
-        secondary: grey[400],
+        secondary: grey[700],
         main: '#e4e5ea',
       },
   },

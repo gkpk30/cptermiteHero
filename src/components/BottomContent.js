@@ -30,7 +30,7 @@ export default function BottomContent() {
                   </Typography>
                   
                   
-                  <Typography my={1}>We Serve Los Angeles, San Fernando Valley, Toluca Lake, Hollywood Area</Typography>
+                  <Typography my={1}>We Serve Los Angeles, San Fernando Valley, Toluca Lake, Hollywood Area and MORE</Typography>
                   <Typography>
                   WE WELCOME: Residential | Commercial | Property Management| Homeowners Associations | Senior Homes | Construction Companies
                   </Typography>
