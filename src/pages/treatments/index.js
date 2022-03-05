@@ -24,17 +24,19 @@ export default function Index({data}) {
    
     return (
         
-            <Box  mb={3}>
-                <Box maxWidth="100%"  mb={4}>
+            <Box mt={{xs:4, sm: 6, md:10}}  mb={3}>
+              {/* ***********************This box below is an optional banner**************************** */}
+                {/* <Box maxWidth="100%"  mb={4}>
                     <StaticImage 
                       // style={{width:'100%', height:'100%'}}  
                       src="../../images/house.png" 
                       alt="Free Estimate, Treatment Options, Warranty and Annual Inspection" 
                       layout='fullWidth' 
                     />
-                </Box>
+                </Box> */}
+                {/* *********************************************************************************** */}
              
-                <Container  maxWidth="lg" >
+                <Container  maxWidth="md" >
                   <Typography variant='h4' component='h1'>
                         We have you covered at Captain Termite Control
                   </Typography>

@@ -86,10 +86,10 @@ export default function ContactForm1() {
   return (
   
   <Box>
-      <Paper sx={{p:3, maxWidth: '600px', margin: 'auto'}} >
+      <Paper elevation={3} sx={{p:3, maxWidth: '600px', margin: 'auto'}} >
         <Typography variant="h5" >Contact Us</Typography>
         <Box>{successMessage}</Box>
-        {/* <Typography  mb={2} gutterBottom color="textSecondary" variant="body2" component="p" >We will keep your information private. Our team will get back to you within 24 hours.</Typography> */}
+        
        
         <form onSubmit={handleSubmit(onSubmit)} >
             <Stack spacing={3}>

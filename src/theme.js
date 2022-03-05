@@ -21,6 +21,9 @@ const theme = createTheme({
     error: {
       main: red.A400,
     },
+    icon:{
+      main: '#6d7fdd',
+    },
     text: {
         primary: '#16204E',
         secondary: grey[400],
