@@ -13,6 +13,7 @@ import BottomContent from '../components/BottomContent'
 
 export default function TreatmentDetails({data}) {
     const {html} = data.markdownRemark
+    console.log(html)
     // const {title} = data.markdownRemark.frontmatter
     const treatments = data.allMarkdownRemark.nodes 
     const slugName= data.allMarkdownRemark.nodes[0].frontmatter.slug

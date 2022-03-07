@@ -58,7 +58,7 @@ export default function HeroSection() {
                     </Grid>
                         <Zoom in={shouldShow}>
                             <Grid item sm={8} xs={12}>
-                                <StaticImage src= "../images/website_logo_transparent_600X400.png" alt="captain termite control logo"  eager="true" placeholder="blurred" 
+                                <StaticImage src= "../images/website_logo_transparent_600X400.png" alt="captain termite control logo"  eager="true" placeholder="TRACED_SVG" 
                                     // objectFit="cover" 
                                     layout='fullWidth' 
                                     style={{

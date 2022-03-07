@@ -1,13 +1,19 @@
 import React from 'react'
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { StaticImage } from 'gatsby-plugin-image'
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
+import CallToAction from '../../components/CallToAction';
 import CustomCard from '../../components/Card'
 import BottomContent from '../../components/BottomContent'
+import Stack from '@mui/material/Stack'
+import Button from '@mui/material/Button'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
+
 
 
 
@@ -37,10 +43,13 @@ export default function Index({data}) {
                 {/* *********************************************************************************** */}
              
                 <Container  maxWidth="md" >
-                  <Typography variant='h4' component='h1'>
-                        We have you covered at Captain Termite Control
-                  </Typography>
-                  <Typography variant="h5" component="h2">We want your Home or Business to grow</Typography>
+                  <CallToAction 
+                    main='We have you covered at Captain Termite Control'
+                    subText='We believe in alternative treatments that fit your lifestyle and that are cost effective. Most structures that have infestations can be controlled without the use of highly toxic chemicals.'
+                    button1='What to Expect'
+                    button2= 'Contact Us'
+                  />
+                  
                
 
                     
