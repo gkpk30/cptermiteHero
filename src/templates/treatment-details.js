@@ -33,7 +33,7 @@ export default function TreatmentDetails({data}) {
         <Breadcrumbs aria-label="breadcrumb" color="text.lightBlue">
         <Link
           underline="hover"
-          sx={{ display: 'flex', alignItems: 'center', fontSize: '.72rem' }}
+          sx={{ display: 'flex', alignItems: 'center', fontSize: '.88rem' }}
           color="text.lightBlue"
           to="/"
 
@@ -43,7 +43,7 @@ export default function TreatmentDetails({data}) {
         </Link>
         <Link
           underline="hover"
-          sx={{ display: 'flex', alignItems: 'center', fontSize: '.72rem' }}
+          sx={{ display: 'flex', alignItems: 'center', fontSize: '.88rem' }}
           color="text.lightBlue"
           to="/treatments"
         >
@@ -51,7 +51,7 @@ export default function TreatmentDetails({data}) {
           SERVICES
         </Link>
         <Typography
-          sx={{ display: 'flex', alignItems: 'center', fontSize: '.72rem' }}
+          sx={{ display: 'flex', alignItems: 'center', fontSize: '.88rem' }}
           color="text.lightBlue"
         >
           <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
