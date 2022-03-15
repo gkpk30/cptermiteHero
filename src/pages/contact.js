@@ -59,7 +59,7 @@ export default function Contact() {
                                 </Box>
                                 <Box display="flex"   sx={{flexDirection:'row', flexWrap: 'no-wrap'}} >
                                     <CheckCircleIcon color="icon" fontSize="small" />
-                                    <Typography color="text.main" pl={1} >We Welcome Residential, Commercial Property Management, Homeowners Associations, Senior Homes and Construction Companies</Typography>
+                                    <Typography color="text.main" pl={1} >We welcome Residential, Commercial Property Management, Homeowners Associations, Senior Homes and Construction Companies</Typography>
                                 </Box>
                             </Box>
                             

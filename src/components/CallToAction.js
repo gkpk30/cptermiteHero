@@ -20,8 +20,18 @@ function CallToAction(props) {
                             
                         }} >
                     <Box sx={{flex:'3'}}>  
-                        <Typography variant='h4' component='h1' > {main}</Typography>
-                        <Typography variant='h6' color="text.main" mt={3}>{subText}</Typography>
+                        <Typography variant='caption text' component='h2' mb={6} color="text.lightBlue" fontWeight='500'  > {props.pageTitle} </Typography>
+                        <Typography 
+                            variant='h3' 
+                            component='h1' 
+                            fontWeight='500' 
+                            letterSpacing='-.02em' 
+                            // fontSize='58px' 
+                            // lineHeight='68px' 
+                            > 
+                            {main}
+                        </Typography>
+                        <Typography variant='body1' color="text.primary" mt={3}>{subText}</Typography>
                         <Box my={8}>
                               <Stack direction="row"   spacing={2}>
                                   <Button component={Link} to="/about" variant="contained" sx={{borderRadius: 4}} color='primary' endIcon={<ArrowForwardIosIcon/>}>{props.button1}</Button>
@@ -30,7 +40,7 @@ function CallToAction(props) {
                         </Box>
 
                     </Box>
-                    <Box sx={{flex: '2'}} pl={4}>
+                    <Box sx={{flex: '2', alignSelf:'center'}} pl={4}>
                           hello
                     </Box>
                   </Box>

@@ -36,6 +36,7 @@ export default function test() {
            {/* place content here */}
            <Container maxWidth="md">
       <Box mt={{xs:4, sm: 6, md:10}} >
+      <Typography variant='caption text' component='h2' mb={6} color="text.lightBlue" fontWeight='500'  > Our Company </Typography>
         <Typography variant="h4" component="h1" gutterBottom>
         Our Mission is to provide the highest level of service at affordable prices
         </Typography>

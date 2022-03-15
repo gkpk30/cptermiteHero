@@ -44,9 +44,10 @@ export default function Index({data}) {
              
                 <Container  maxWidth="md" >
                   <CallToAction 
+                    pageTitle='Treatment and Services'
                     main='We have you covered at Captain Termite Control'
                     subText='We believe in alternative treatments that fit your lifestyle and that are cost effective. Most structures that have infestations can be controlled without the use of highly toxic chemicals.'
-                    button1='What to Expect'
+                    button1='About Us'
                     button2= 'Contact Us'
                   />
                   

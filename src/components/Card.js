@@ -7,21 +7,21 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import {Link} from 'gatsby'
 
 export default function CustomCard(props) {
-  const maxWidth= props.maxWidth || 345
+  const maxWidth= props.maxWidth || 245
     return (
-        <Card sx={{ maxWidth: maxWidth }} >
+        <Card sx={{ maxWidth: maxWidth, backgroundColor: '#0d0d0ec2' }}  >
       <CardActionArea component={Link} to={props.slug} >
          
           <GatsbyImage  image={props.thumbImage} alt={props.title} />
       
         <CardContent  >
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h5" component="div" color="text.main">
             {props.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
            {props.excerpt}
           </Typography>
-          <Typography variant="body1" color="text.primary">Time To Read: {props.timeToRead}min</Typography>
+          <Typography variant="body1" color="text.secondary" mt={1}>Time To Read: {props.timeToRead}min</Typography>
         </CardContent>
       </CardActionArea>
     </Card>
