@@ -19,12 +19,12 @@ export default function BottomContent() {
                   that have infestations can be controlled without the use of highly toxic chemicals. If necessary, Captain Termite Control Inc can also recommend a traditional tent fumigation option.
               </Typography>
               <Typography>
-                  When dealing with unwanted termites or taking preventative actions, Captain Termite Control, Inc. will provide effective and affordable termite control solutions to prevent costly damage to your property.
+                 According to consumerAffairs.com pest control statistics and trends Los Angelses ranks in the top 20 cities in the United States, sitting at number 11, with the most termites. When dealing with unwanted termites or taking preventative actions, Captain Termite Control, Inc. will provide effective and affordable termite control solutions to prevent costly damage to your property.
               </Typography>
 
               <Divider />
 
-              <Box my={4} p={2} sx={{backgroundColor: '#b7a0a0'}}>
+              <Box my={4} p={2} sx={{backgroundColor: '#6e545475'}}>
                   <Typography mt={2} fontWeight="500" variant="h5" sx={{fontStyle: 'italic', lineHeight: '1.25'}} >
                   Call us to setup an appointment for your FREE estimate today. <strong><br/> (818) 822-6782 <br/> 8am-8pm / 7 days a week </strong>
                   </Typography>

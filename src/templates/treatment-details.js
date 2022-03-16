@@ -76,6 +76,7 @@ export default function TreatmentDetails({data}) {
                             {treatments.map(treatment=> (
                                 <Grid item key={treatment.id}>
                                     <CustomCard treatment={treatment}
+                                       
                                         maxWidth={245}
                                         title={treatment.frontmatter.title}
                                         slug={'../' + treatment.frontmatter.slug}

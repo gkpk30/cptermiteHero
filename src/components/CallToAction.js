@@ -35,7 +35,7 @@ function CallToAction(props) {
                         <Box my={8}>
                               <Stack direction="row"   spacing={2}>
                                   <Button component={Link} to="/about" variant="contained" sx={{borderRadius: 4}} color='primary' endIcon={<ArrowForwardIosIcon/>}>{props.button1}</Button>
-                                  <Button component={Link} to="/contact"variant="contained" sx={{borderRadius: 4,}} color='third' endIcon={<ArrowForwardIosIcon/>}>{props.button2}</Button>
+                                  <Button component={Link} to="/contact" variant="text"  color='primary' endIcon={<ArrowForwardIosIcon/>}>{props.button2}</Button>
                               </Stack>
                         </Box>
 

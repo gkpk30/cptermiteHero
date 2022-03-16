@@ -9,7 +9,13 @@ import {Link} from 'gatsby'
 export default function CustomCard(props) {
   const maxWidth= props.maxWidth || 245
     return (
-        <Card sx={{ maxWidth: maxWidth, backgroundColor: '#0d0d0ec2' }}  >
+        <Card 
+        sx={{ 
+          // maxWidth: maxWidth, 
+          maxWidth: {xs: '300px', sm: maxWidth},
+          backgroundColor: '#0d0d0ec2'
+         }} 
+         >
       <CardActionArea component={Link} to={props.slug} >
          
           <GatsbyImage  image={props.thumbImage} alt={props.title} />

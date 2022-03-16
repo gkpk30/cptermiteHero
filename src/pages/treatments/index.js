@@ -54,11 +54,12 @@ export default function Index({data}) {
                
 
                     
-                    <Box my={4}>
-                        <Grid container  spacing={2} justifyContent='center'   direction='row'>
+                    <Box my={6}>
+                        <Grid container  spacing={2} justifyContent='space-evenly'   direction='row'>
                             {treatments.map(treatment=> (
                                 <Grid item key={treatment.id}>
                                     <CustomCard treatment={treatment}
+                                        maxWidth={245}
                                         title={treatment.frontmatter.title}
                                         slug={treatment.frontmatter.slug}
                                         excerpt={treatment.excerptAst.children[2].children[0].value}
