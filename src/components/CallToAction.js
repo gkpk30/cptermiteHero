@@ -5,11 +5,14 @@ import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import InfoGraph from './InfoGraph'
+import Chart_Pie from './Chart_Pie'
 
 function CallToAction(props) {
     console.log(props)
     const main = props.main
     const subText = props.subText
+    
  
   return (
     
@@ -19,7 +22,7 @@ function CallToAction(props) {
                             justifyContent: 'space-between'
                             
                         }} >
-                    <Box sx={{flex:'3'}}>  
+                    <Box sx={{flex:'2'}}>  
                         <Typography variant='caption text' component='h2' mb={6} color="text.lightBlue" fontWeight='500'  > {props.pageTitle} </Typography>
                         <Typography 
                             variant='h3' 
@@ -40,8 +43,10 @@ function CallToAction(props) {
                         </Box>
 
                     </Box>
-                    <Box sx={{flex: '2', alignSelf:'center'}} pl={4}>
-                          hello
+                    <Box sx={{flex: '3', alignSelf:'center'}} pl={4}>
+                        {/* <InfoGraph /> */}
+                        {props.chart == 'pie' && <Chart_Pie/>}
+                        {props.chart == 'infoChart' && <InfoGraph/>}
                     </Box>
                   </Box>
     

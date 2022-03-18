@@ -29,7 +29,8 @@ const theme = createTheme({
         secondary: grey[400],
         main: '#e4e5ea',
         third: grey[700],
-        lightBlue:'#6d7fdd'
+        lightBlue:'#6d7fdd',
+        orange: '#bb420f'
       },
   },
 //   palette: {
