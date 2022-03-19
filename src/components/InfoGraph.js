@@ -9,6 +9,7 @@ import {
 } from 'chart.js';
 import {Bar} from "react-chartjs-2";
 import React, {useState, useEffect} from 'react'
+import Box from '@mui/material/Box'
 
 ChartJS.register(
     CategoryScale,  
@@ -19,7 +20,7 @@ ChartJS.register(
     Legend 
 );
 
-function InfoGraph() {
+function InfoGraph(props) {
 
     const [chartData, setChartData] = useState({
         datasets: [],
@@ -30,6 +31,7 @@ function InfoGraph() {
         
     })
 
+    const aspectRatio = props.aspectRatio
 
     useEffect(() => {
       setChartData({
@@ -46,7 +48,8 @@ function InfoGraph() {
                 ],
           datasets: [
               {
-                  label: 'Top 20 cities with the most termites (2018 Rank) ',
+                //   label: 'Top 20 cities with the most termites (2018 Rank) ',
+                label: 'Top 5 cities most termites (2018)',
                   data: [
                             17,
                             15,
@@ -67,6 +70,8 @@ function InfoGraph() {
 
       setChartOptions({
           responsive: true, 
+        //   maintainAspectRatio: false,
+        aspectRatio: aspectRatio,
           plugins: {
               legend: {
                   position: "top"
@@ -85,7 +90,9 @@ function InfoGraph() {
     
 
   return (
-    <Bar options={chartOptions} data={chartData}/>
+      <Box sx={{ position: 'relative',  minHeight:'300px' }}>
+        <Bar options={chartOptions} data={chartData}/>
+      </Box>
   )
 }
 

@@ -45,10 +45,25 @@ function CallToAction(props) {
                     </Box>
                     <Box sx={{flex: '4', alignSelf:'center'}} >
                         {/* <InfoGraph /> */}
-                        <Box sx={{display: {mdDown: 'none'}}}>
+                        <Box 
+                            sx={{
+                                display: {sm: 'none'}
+                            }}
+                        >
                             {props.chart == 'pie' && <Chart_Pie/>}
-                            {props.chart == 'infoChart' && <InfoGraph/>}
+                            {props.chart == 'infoChart' && <InfoGraph aspectRatio= '1'/>}
                         </Box>
+
+                        <Box 
+                            sx={{
+                                display: {xs: 'none', sm: 'block'}
+                            }}
+                        >
+                            {props.chart == 'pie' && <Chart_Pie/>}
+                            {props.chart == 'infoChart' && <InfoGraph aspectRatio= '2'/>}
+                        </Box>
+
+
                     </Box>
                   </Box>
     
