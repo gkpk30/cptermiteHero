@@ -77,7 +77,7 @@ export default function HeroSection() {
                                 </Box>
                                 <Box my={8}>
                                     <Stack direction="row"   spacing={2}>
-                                        <Button component={Link} to="/about" variant="contained" sx={{borderRadius: 4}} color='primary' endIcon={<ArrowForwardIosIcon/>}>Learn More</Button>
+                                        <Button component={Link} to="/treatments" variant="contained" sx={{borderRadius: 4}} color='primary' endIcon={<ArrowForwardIosIcon/>}>Learn More</Button>
                                         <Button component={Link} to="/contact"variant="contained" sx={{borderRadius: 4,}} color='third' endIcon={<ArrowForwardIosIcon/>}>Contact Us</Button>
                                     </Stack>
                                 </Box>

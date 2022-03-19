@@ -17,6 +17,7 @@ import Chart_Pie from '../../components/Chart_Pie'
 
 
 
+
 export default function Index({data}) {
     console.log(data)
     const treatments = data.allMarkdownRemark.nodes 
@@ -56,14 +57,14 @@ export default function Index({data}) {
               
                 
                 <Container maxWidth="md"  >
-                  <Box display="flex" mt={{xs:4, sm: 6, md:10}}  mb={8} sx={{
+                  <Box display="flex" gap={2} mt={{xs:4, sm: 6, md:10}}  mb={8} sx={{
                             
                             flexDirection: {xs: 'column ', sm: 'row'},
                             justifyContent: 'space-between'
                             
                         }} 
                         >
-                    <Box sx={{flex:'5'}}>
+                    <Box sx={{flex:'4'}}>
                         <Typography variant='caption text' component='h4' mb={6} color="text.orange" fontWeight='500'  > For Homeowners </Typography>
                         <Typography variant='h4' 
                               component='h2' 
@@ -78,16 +79,20 @@ export default function Index({data}) {
                         </Typography>
                     </Box >
                     
-                    <Box sx={{flex:'4', pt: 8, pl: 2}} >
+                    <Box sx={{flex:'3',  pt: 8}} >
+                      <Box sx={{display: {xs: 'none', sm: 'block'}}} >
                        <Box maxWidth="100%"  mb={4}>
                         <StaticImage 
-                          // style={{width:'100%', height:'100%'}}  
+                          style={{width:'100%', height:'100%'}}  
                           src="../../images/house.png" 
                           alt="Free Estimate, Treatment Options, Warranty and Annual Inspection" 
                           layout='fullWidth' 
                         />
+                        </Box>
+                      
+                        <Chart_Pie/>
                       </Box>
-                      <Chart_Pie/>
+                      
                     </Box>
 
                   </Box>

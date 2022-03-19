@@ -18,11 +18,11 @@ function CallToAction(props) {
     
            <Box display='flex' sx={{
                             
-                            flexDirection: {xs: 'column ', sm: 'row'},
+                            flexDirection: {xs: 'column ', md: 'row'},
                             justifyContent: 'space-between'
                             
                         }} >
-                    <Box sx={{flex:'2'}}>  
+                    <Box sx={{flex:'3'}}>  
                         <Typography variant='caption text' component='h2' mb={6} color="text.lightBlue" fontWeight='500'  > {props.pageTitle} </Typography>
                         <Typography 
                             variant='h3' 
@@ -43,10 +43,12 @@ function CallToAction(props) {
                         </Box>
 
                     </Box>
-                    <Box sx={{flex: '3', alignSelf:'center'}} pl={4}>
+                    <Box sx={{flex: '4', alignSelf:'center'}} >
                         {/* <InfoGraph /> */}
-                        {props.chart == 'pie' && <Chart_Pie/>}
-                        {props.chart == 'infoChart' && <InfoGraph/>}
+                        <Box sx={{display: {mdDown: 'none'}}}>
+                            {props.chart == 'pie' && <Chart_Pie/>}
+                            {props.chart == 'infoChart' && <InfoGraph/>}
+                        </Box>
                     </Box>
                   </Box>
     
