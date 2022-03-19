@@ -33,11 +33,32 @@ function InfoGraph() {
 
     useEffect(() => {
       setChartData({
-          labels: [ 'Baton Rouge, LA', "Fort Smith, AR", 'Honolulu, HI', "Little Rock, AR", "Los Angeles, CA",'Mobile, AL',  "Memphis, TN", "Oklahoma City, OK",  "Orlando, FL", "San Diego, CA" ],
+          labels: [ 'Baton Rouge, LA', 
+                    "Fort Smith, AR", 
+                    'Honolulu, HI', 
+                    "Little Rock, AR", 
+                    "Los Angeles, CA",
+                    // 'Mobile, AL',  
+                    // "Memphis, TN", 
+                    // "Oklahoma City, OK",  
+                    // "Orlando, FL", 
+                    // "San Diego, CA" 
+                ],
           datasets: [
               {
                   label: 'Top 20 cities with the most termites (2018 Rank) ',
-                  data: [17,15,19,16,11,20,14,2,4,2],
+                  data: [
+                            17,
+                            15,
+                            19,
+                            16,
+                            11,
+                            // 20,
+                            // 14,
+                            // 2,
+                            // 4,
+                            // 2
+                        ],
                   borderColor: 'rgb(53,162,235)',
                   backgroundColor: 'rgb(53,162,235,0.4)'
               },
