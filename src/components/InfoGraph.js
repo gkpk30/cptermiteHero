@@ -35,11 +35,11 @@ function InfoGraph(props) {
 
     useEffect(() => {
       setChartData({
-          labels: [ 'Baton Rouge, LA', 
-                    "Fort Smith, AR", 
-                    'Honolulu, HI', 
-                    "Little Rock, AR", 
-                    "Los Angeles, CA",
+          labels: [ 'Burbank, CA', 
+                    "Hollywood, CA", 
+                    'Los Angeles, CA', 
+                    "Van Nuys, CA", 
+                    "San Diego, CA",
                     // 'Mobile, AL',  
                     // "Memphis, TN", 
                     // "Oklahoma City, OK",  
@@ -49,13 +49,13 @@ function InfoGraph(props) {
           datasets: [
               {
                 //   label: 'Top 20 cities with the most termites (2018 Rank) ',
-                label: 'Top 5 cities most termites (2018)',
+                label: 'Top 5 cities in CA with most termites (2018)',
                   data: [
-                            17,
-                            15,
+                            9,
+                            3,
                             19,
                             16,
-                            11,
+                            6,
                             // 20,
                             // 14,
                             // 2,
