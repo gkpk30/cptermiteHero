@@ -80,7 +80,9 @@ export default function Index({data}) {
                     </Box >
                     
                     <Box sx={{flex:'3',  pt: 8}} >
-                      <Box sx={{display: {xs: 'none', sm: 'block'}}} >
+                      <Box 
+                        // sx={{display: {xs: 'none', sm: 'block'}}}
+                       >
                        <Box maxWidth="100%"  mb={4}>
                         <StaticImage 
                           style={{width:'100%', height:'100%'}}  
