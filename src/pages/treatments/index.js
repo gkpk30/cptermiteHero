@@ -57,7 +57,7 @@ export default function Index({data}) {
               
                 
                 <Container maxWidth="md"  >
-                  <Box display="flex" gap={2} mt={{xs:4, sm: 6, md:10}}  mb={8} sx={{
+                  <Box display="flex" gap={2} mt={{xs:6, sm: 8, md:12, lg: 22}}  mb={8} sx={{
                             
                             flexDirection: {xs: 'column ', sm: 'row'},
                             justifyContent: 'space-between'
@@ -65,7 +65,9 @@ export default function Index({data}) {
                         }} 
                         >
                     <Box sx={{flex:'4'}}>
-                        <Typography variant='caption text' component='h4' mb={6} color="text.orange" fontWeight='500'  > For Homeowners </Typography>
+                        <Typography variant='caption text' component='h4' mb={6} color="text.orange" fontWeight='500'  > 
+                          For Homeowners 
+                        </Typography>
                         <Typography variant='h4' 
                               component='h2' 
                               fontWeight='500' 
@@ -97,8 +99,8 @@ export default function Index({data}) {
                       
                     </Box>
 
-                  </Box>
-                      <Box my={6}>
+                  </Box >
+                      <Box mt={{xs:4, sm: 6, md:10, lg: 22}}>
                           <Grid container  spacing={2} justifyContent='space-evenly'   direction='row'>
                               {treatments.map(treatment=> (
                                   <Grid item key={treatment.id}>
