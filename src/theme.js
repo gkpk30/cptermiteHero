@@ -30,7 +30,9 @@ const theme = createTheme({
         main: '#e4e5ea',
         third: grey[700],
         lightBlue:'#6d7fdd',
-        orange: '#bb420f'
+        orange: '#bb420f',
+        green: '#5c810a',
+        yellow: '#ebdec2'
       },
   },
 //   palette: {

@@ -47,7 +47,7 @@ export const options = {
 
 
 
-function Chart_Pie() {
+function ChartPie() {
   return (
     // <Box sx={{display: {xs: 'none', sm: 'block'}}} >
      <Pie data={data} options={options}/>
@@ -55,4 +55,4 @@ function Chart_Pie() {
   )
 }
 
-export default Chart_Pie
+export default ChartPie

@@ -6,12 +6,14 @@ import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import InfoGraph from './InfoGraph'
-import Chart_Pie from './Chart_Pie'
+import ChartPie from './Chart_Pie'
 
 function CallToAction(props) {
     console.log(props)
     const main = props.main
     const subText = props.subText
+    
+    
     
  
   return (
@@ -50,8 +52,8 @@ function CallToAction(props) {
                                 display: {sm: 'none'}
                             }}
                         >
-                            {props.chart == 'pie' && <Chart_Pie/>}
-                            {props.chart == 'infoChart' && <InfoGraph aspectRatio= '1'/>}
+                            {props.chart === 'pie' && <ChartPie/>}
+                            {props.chart === 'infoChart' && <InfoGraph aspectRatio= '1'/>}
                         </Box>
 
                         <Box 
@@ -59,8 +61,8 @@ function CallToAction(props) {
                                 display: {xs: 'none', sm: 'block'}
                             }}
                         >
-                            {props.chart == 'pie' && <Chart_Pie/>}
-                            {props.chart == 'infoChart' && <InfoGraph aspectRatio= '2'/>}
+                            {props.chart === 'pie' && <ChartPie/>}
+                            {props.chart === 'infoChart' && <InfoGraph aspectRatio= '2'/>}
                         </Box>
 
 

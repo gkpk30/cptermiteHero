@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useForm,useFieldArray, Controller } from "react-hook-form"
+import styles from '../styles/contactForm1.module.css'
 import Stack from '@mui/material/Stack'
 import Paper from '@mui/material/Paper'
 import Box from '@mui/material/Box'
@@ -10,11 +11,18 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import CircularProgress from '@mui/material/CircularProgress';
+import LinearProgress from '@mui/material/LinearProgress';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import Fade from '@mui/material/Fade';
+
 
 
 
 
 export default function ContactForm1() {
+
+  const [hideForm, setHideForm] = useState(false);
 
   
 
@@ -26,11 +34,15 @@ export default function ContactForm1() {
       setPropertyType(event.target.value);
     };
 
-    const [successMessage, setSuccessMessage] = useState(<Typography id='contact-message' mb={2} gutterBottom color="textSecondary" variant="body2" component="p" >We will keep your information private. Our team will get back to you within 24 hours.</Typography>);
-  // setSuccessMessage(<Typography id='contact-message' mb={2} gutterBottom color="textSecondary" variant="body2" component="p" >We will keep your information private. Our team will get back to you within 24 hours.</Typography>);
+   
+
+    const [message, setMessage] = useState(<Typography id='contact-message' mb={2} gutterBottom color="textSecondary" variant="body2" component="p" >We will keep your information private. Our team will get back to you within 24 hours.</Typography>);
+
+    
+  
 
 
-    const { register, control, handleSubmit, reset, formState, formState: { isSubmitSuccessful} } = useForm({
+    const { register, control, handleSubmit, reset, formState, formState: { isSubmitting, isSubmitSuccessful} } = useForm({
       defaultValues: { 
         Name: "", 
         Phone: "", 
@@ -68,30 +80,53 @@ export default function ContactForm1() {
         .catch(errors => console.log(errors));
     }
 
+    // const form = () => {document.getElementByID("root")}
+
     React.useEffect(() => {
+
+      // const clearNode = () => unmountComponentAtNode(document.getElementByID('root'))
+      // const form = () => document.getElementByID("root")
+      
+      
       if (formState.isSubmitSuccessful){
+        
+        
         reset({Name: "", 
         Phone: "", 
         Email: "",
         PropertyType: setPropertyType(''),
         Message: ""})
-        setSuccessMessage(<Typography mb={2} gutterBottom color="success.main" variant="h6" component="p" >THANK YOU! We Received Your Request. Our team will get back to you within 24 hours. </Typography>)
+        setHideForm(true)
+        setMessage( <Box textAlign="center"><CircularProgress   fontSize="large" color="success" sx={{mt: 20}}  /> </Box>)
+        setTimeout(() => {setMessage(<Fade in={true}><Box mt={20} textAlign="center" ><CheckCircleIcon  fontSize="large" color="success" /></Box></Fade>)}, 1000)
+        setTimeout(() => {setMessage( <Fade in={true}><Typography mt={20} mb={2} gutterBottom color="success.main" variant="h6" component="p" >THANK YOU! We Received Your Request. Our team will get back to you within 24 hours. </Typography></Fade>)}, 3000)
+        console.log(`hideForm is : ${hideForm}`)
+        
+        
+        
       }
 
     }, [formState, submittedData, reset]);
 
+  
     
 
-
   return (
-  
+    
+    
   <Box>
-      <Paper elevation={3} sx={{p:3, maxWidth: '600px', margin: 'auto'}} >
-        <Typography variant="h5" >Contact Us</Typography>
-        <Box>{successMessage}</Box>
+      <Paper elevation={3} sx={{p:3, maxWidth: '600px', minHeight: '650px'}} >
+        <Typography variant="h5" style={{display: !hideForm ? "block" : "none", }} >Contact Us</Typography>
+        <Box sx={{display: !hideForm ? "flex" : "block" }}>{message}</Box>
         
-       
-        <form onSubmit={handleSubmit(onSubmit)} >
+       <div 
+         style={{display: !hideForm ? "block" : "none"}}
+       >
+        <form  
+         
+          // className={`styles.formBox ${hideForm ? "styles.hide-formBox" : ""}`}
+          onSubmit={handleSubmit(onSubmit)} 
+          >
             <Stack spacing={3}>
                 <TextField
                 required
@@ -144,8 +179,10 @@ export default function ContactForm1() {
                 <Button type="submit" variant="contained" color="primary">Submit</Button>
             </Stack>
         </form>
+        </div>
       </Paper>
 
   </Box>
+  
   )
 }

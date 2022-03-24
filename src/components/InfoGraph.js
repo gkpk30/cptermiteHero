@@ -86,7 +86,7 @@ function InfoGraph(props) {
     //   return () => {
     //     second
     //   }
-    }, [])
+    }, [aspectRatio])
     
 
   return (
