@@ -30,7 +30,7 @@ const [shouldShow, setShouldShow] = useState(false)
             <Container maxWidth="md" >
                 <Box  mt={{xs:4, sm: 6, md:10}}>
                 <Typography variant='caption text' component='h2' mb={6} color="text.lightBlue" fontWeight='500'  > Termites </Typography>
-                    <Typography mb={2} variant="h4" component="h1"> DRYWOOD TERMITES</Typography>
+                    <Typography mb={2} variant="h4" component="h1" fontWeight='500'> DRYWOOD TERMITES</Typography>
                         
                     <Typography variant="h5" component="h2">
                         What They Look Like 
@@ -79,7 +79,7 @@ const [shouldShow, setShouldShow] = useState(false)
                 
                 <Divider sx={{my:2}}/>
 
-                <Typography mt={3} variant="h4" component="h1"> 
+                <Typography mt={3} variant="h4" component="h1" fontWeight='500'> 
                     SUBTERRANEAN TERMITES
                 </Typography>
                 <Typography mt={2} variant="h5" component="h2">

@@ -13,7 +13,7 @@ export default function CustomCard(props) {
         sx={{ 
           // maxWidth: maxWidth, 
           maxWidth: {xs: '300px', sm: maxWidth},
-          backgroundColor: '#0d0d0ec2'
+          backgroundColor: '#10141f7d'
          }} 
          >
       <CardActionArea component={Link} to={props.slug} >

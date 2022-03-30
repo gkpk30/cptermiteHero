@@ -32,7 +32,7 @@ const theme = createTheme({
         lightBlue:'#6d7fdd',
         orange: '#bb420f',
         green: '#5c810a',
-        yellow: '#ebdec2'
+        yellow: '#685631'
       },
   },
 //   palette: {

@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import { graphql, Link } from "gatsby"
+import { graphql} from "gatsby"
 import { StaticImage } from 'gatsby-plugin-image'
-import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
@@ -9,7 +8,6 @@ import Grid from '@mui/material/Grid'
 import CallToAction from '../../components/CallToAction';
 import CustomCard from '../../components/Card'
 import BottomContent from '../../components/BottomContent'
-import InfoGraph from '../../components/InfoGraph'
 import ChartPie from '../../components/Chart_Pie'
 import Fade from '@mui/material/Fade';
 
@@ -61,7 +59,7 @@ export default function Index({data}) {
                 
                   
                   <Container maxWidth="md"  >
-                    <Box display="flex" gap={2} mt={{xs:6, sm: 8, md:12, lg: 22}}  mb={8} sx={{
+                    <Box display="flex" gap={2} mt={{xs:10, sm: 12, md:16, lg: 22}}  mb={8} sx={{
                               
                               flexDirection: {xs: 'column ', sm: 'row'},
                               justifyContent: 'space-between'
@@ -105,8 +103,8 @@ export default function Index({data}) {
                       </Box>
 
                     </Box >
-                        <Box mt={{xs:4, sm: 6, md:10, lg: 22}}>
-                        <Typography variant='caption text' component='h4' mb={6} color="text.yellow" fontWeight='500'  > 
+                        <Box mt={{xs:10, sm: 12, md:16, lg: 22}}>
+                          <Typography variant='caption text' component='h4' mb={6} color="text.yellow" fontWeight='500'  > 
                             Termite Control Options 
                           </Typography>
                           <Typography 
@@ -114,6 +112,7 @@ export default function Index({data}) {
                                 component='h2' 
                                 fontWeight='500' 
                                 letterSpacing='-.02em' 
+                                sx={{maxWidth: {md: '70%'}}}
                                 >
                                   We use the best equipment and products available today. We offer a variety of localized treatment options.
                                   

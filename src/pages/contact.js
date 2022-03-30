@@ -33,7 +33,7 @@ export default function Contact() {
         <Fade in={shouldShow} style={{ transitionDelay: shouldShow ? '250ms' : '0ms' }}>
             <Box mt={{xs:4, sm: 6, md:10}} >
                     <Container maxWidth="md">
-                        <Typography color="text.primary" elevation={3} component="h1" textAlign="center"   variant="h4" >Contact our team</Typography>
+                        <Typography color="text.primary" elevation={3} component="h1" textAlign="center"   variant="h4" fontWeight='500' >Contact our team</Typography>
                         <Box 
                             mt={{xs:4, sm: 6, md:10}} 
                             display='flex'  
@@ -73,7 +73,7 @@ export default function Contact() {
                         </Box>
                     
             <Divider sx={{my:4}} />
-            <ProfilePic/>
+            
             <BottomContent/>
             </Container>
         </Box>

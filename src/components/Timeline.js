@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography'
 export default function CustomizedTimeline() {
   return (
       <Box mt={8}>
-        <Typography variant="h4" sx={{textAlign: 'center'}}>What to Expect</Typography>
+        <Typography variant="h4" sx={{textAlign: 'center'}} fontWeight='500'>What to Expect</Typography>
 
         <Timeline 
         position="right"
