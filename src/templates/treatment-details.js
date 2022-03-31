@@ -33,65 +33,75 @@ export default function TreatmentDetails({data}) {
       <Fade in={shouldShow} style={{ transitionDelay: shouldShow ? '250ms' : '0ms' }}>
           <Box mt={{xs:4, sm: 6, md:10}}  mb={3}>
             <Container maxWidth="md">
-            <Breadcrumbs aria-label="breadcrumb" color="text.lightBlue">
-            <Link
-              underline="hover"
-              sx={{ display: 'flex', alignItems: 'center', fontSize: '.88rem' }}
-              color="text.lightBlue"
-              to="/"
+              <Breadcrumbs aria-label="breadcrumb" color="text.lightBlue">
+              <Link
+                underline="hover"
+                sx={{ display: 'flex', alignItems: 'center', fontSize: '.88rem' }}
+                color="text.lightBlue"
+                to="/"
 
-            >
-              <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-              HOME
-            </Link>
-            <Link
-              underline="hover"
-              sx={{ display: 'flex', alignItems: 'center', fontSize: '.88rem' }}
-              color="text.lightBlue"
-              to="/treatments"
-            >
-              <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-              SERVICES
-            </Link>
-            <Typography
-              sx={{ display: 'flex', alignItems: 'center', fontSize: '.88rem' }}
-              color="text.lightBlue"
-            >
-              <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-              {title}
-            </Typography>
-          </Breadcrumbs>
-                {/* <Typography variant='caption text' component='h2' mb={6} color="text.lightBlue" fontWeight='500'  > {title} </Typography> */}
-                <Typography component="span" dangerouslySetInnerHTML={{__html:html}}/>
-                
-                <Divider sx={{mt: 20}}/>
+              >
+                <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+                HOME
+              </Link>
+              <Link
+                underline="hover"
+                sx={{ display: 'flex', alignItems: 'center', fontSize: '.88rem' }}
+                color="text.lightBlue"
+                to="/treatments"
+              >
+                <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+                SERVICES
+              </Link>
+              <Typography
+                sx={{ display: 'flex', alignItems: 'center', fontSize: '.88rem' }}
+                color="text.lightBlue"
+              >
+                <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+                {title}
+              </Typography>
+            </Breadcrumbs>
+                  {/* <Typography variant='caption text' component='h2' mb={6} color="text.lightBlue" fontWeight='500'  > {title} </Typography> */}
+                  <Typography component="span" dangerouslySetInnerHTML={{__html:html}}/>
+                  
+                  <Divider sx={{mt: 4}}/>
 
-                <BottomContent/>
+                  <BottomContent/>
 
 
-                <Box mt={4}>
-                        <Typography variant='h4' component='h1'>
-                            We have you covered at Captain Termite Control
+                  <Box mt={{xs:10, sm: 12, md:16, lg: 22}}>
+                      <Typography variant='caption text' component='h4' mb={6} color="text.yellow" fontWeight='500'  > 
+                        Termite Control Options 
                       </Typography>
-                      <Typography variant="h5" component="h3">Check out more services we have to offer</Typography>
-                            
-                            <Grid sx={{mt:4}} container  spacing={2} justifyContent='center'   direction='row'>
-                                {treatments.map(treatment=> (
-                                    <Grid item key={treatment.id}>
-                                        <CustomCard treatment={treatment}
-                                          
-                                            maxWidth={245}
-                                            title={treatment.frontmatter.title}
-                                            slug={'../' + treatment.frontmatter.slug}
-                                            excerpt={treatment.excerptAst.children[2].children[0].value}
-                                            timeToRead={treatment.timeToRead}
-                                            thumbnail={treatment.thumb}
-                                            thumbImage={treatment.frontmatter.thumb.childImageSharp.gatsbyImageData}
-                                        />
-                                    </Grid>
-                                ))}    
-                            </Grid>
-                </Box>
+                      <Typography 
+                            variant='h4' 
+                            component='h2' 
+                            fontWeight='500' 
+                            letterSpacing='-.02em' 
+                            sx={{maxWidth: {md: '70%'}}}
+                            >
+                              We use the best equipment and products available today. We offer a variety of localized treatment options.
+                              
+                      </Typography>
+                      <Typography variant='body1' color="text.primary" mt={3} gutterBottom >
+                      Successful termite management requires early detection, special skills and knowledge, including a working knowledge of building construction.
+                      </Typography>
+                        <Grid container mt={6}  spacing={2} justifyContent='center'   direction='row'>
+                            {treatments.map(treatment=> (
+                                <Grid item key={treatment.id}>
+                                    <CustomCard treatment={treatment}
+                                        maxWidth={245}
+                                        title={treatment.frontmatter.title}
+                                        slug={treatment.frontmatter.slug}
+                                        excerpt={treatment.excerptAst.children[2].children[0].value}
+                                        timeToRead={treatment.timeToRead}
+                                        thumbnail={treatment.thumb}
+                                        thumbImage={treatment.frontmatter.thumb.childImageSharp.gatsbyImageData}
+                                    />
+                                </Grid>
+                            ))}    
+                        </Grid>
+                    </Box>
             </Container>
             </Box>
         </Fade>
