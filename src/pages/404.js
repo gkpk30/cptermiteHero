@@ -14,7 +14,7 @@ export default function notFound() {
     return (
 
         <Container maxWidth="md" >
-           <Box mt={{xs:4, sm: 6, md:10}} height="100vh">
+           <Box mt={{xs:4, sm: 6, md:10}} minHeight="100vh">
                <InfoGlass/>
                <StaticImage src= "../images/website_logo_transparent_600X400.png" alt="captain termite control logo"  eager="true" placeholder="TRACED_SVG" 
                                     // objectFit="cover" 
