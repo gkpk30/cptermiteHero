@@ -92,7 +92,7 @@ export default function TreatmentDetails({data}) {
                                     <CustomCard treatment={treatment}
                                         maxWidth={245}
                                         title={treatment.frontmatter.title}
-                                        slug={treatment.frontmatter.slug}
+                                        slug={'../' + treatment.frontmatter.slug}
                                         excerpt={treatment.excerptAst.children[2].children[0].value}
                                         timeToRead={treatment.timeToRead}
                                         thumbnail={treatment.thumb}
