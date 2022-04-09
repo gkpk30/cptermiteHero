@@ -16,15 +16,17 @@ export default function notFound() {
         <Container maxWidth="md" >
            <Box mt={{xs:4, sm: 6, md:10}} minHeight="100vh">
                <InfoGlass/>
-               <StaticImage src= "../images/website_logo_transparent_600X400.png" alt="captain termite control logo"  eager="true" placeholder="TRACED_SVG" 
-                                    // objectFit="cover" 
-                                    layout='fullWidth' 
-                                    style={{
-                                            
-                                            width: '35%',  
-                                            zIndex: '1', 
-                                        }}  
-                                />
+               <Box component={Link} to="/">
+                <StaticImage src= "../images/website_logo_transparent_600X400.png" alt="captain termite control logo"  eager="true" placeholder="TRACED_SVG" 
+                                        // objectFit="cover" 
+                                        layout='fullWidth' 
+                                        style={{
+                                                
+                                                width: '35%',  
+                                                zIndex: '1', 
+                                            }}  
+                    />
+                </Box>
                <Typography variant='caption text' component='h2' mb={6} color="text.lightBlue" fontWeight='500'>
                     404
                </Typography>

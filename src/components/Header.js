@@ -136,7 +136,7 @@ export default function Header({location}) {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static" enableColorOnDark color="primary" > 
+          <AppBar position="static" enableColorOnDark color="primary"  position="fixed" > 
               <Container maxWidth='lg' disableGutters >
                  <Toolbar >
                  <Typography component={Link} to='/' sx={{color: 'text.secondary', marginRight:'auto'}} >Captain Termite Control </Typography>
@@ -256,7 +256,7 @@ export default function Header({location}) {
                                     </List>
               </SwipeableDrawer>
           </AppBar>
-          {/* <Offset /> */}
+          <Toolbar />
         </Box>
     )
 }
