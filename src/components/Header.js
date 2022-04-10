@@ -136,10 +136,11 @@ export default function Header({location}) {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
+           
           <AppBar position="static" enableColorOnDark color="primary"  position="fixed" > 
               <Container maxWidth='lg' disableGutters >
                  <Toolbar >
-                 <Typography component={Link} to='/' sx={{color: 'text.secondary', marginRight:'auto'}} >Captain Termite Control </Typography>
+                 <Typography component={Link} to='/' sx={{color: 'text.main', marginRight:'auto'}} >Captain Termite Control </Typography>
                      <Hidden smDown>
                                 {navigationLinks.map(link => (
                                      (link.endIcon) ? 

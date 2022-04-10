@@ -6,9 +6,9 @@ export default function Copyright(props) {
   const siteName = props.siteName
 
   return (
-    <Typography variant="body2" color="text.third" align="center">
+    <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '} 
-      <MuiLink color="inherit" href="https://mui.com/">
+      <MuiLink color="inherit" href="https://gnkdesigns.com/">
         {siteName}
       </MuiLink>{' '}
       {new Date().getFullYear()}

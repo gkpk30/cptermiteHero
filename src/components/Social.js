@@ -13,9 +13,12 @@ const socialItems =[
 ]
 
 export default function Social(props) {
+   
+   
+   
     return (
-        <Stack direction={{ xs: 'row', sm: 'column' }}      >
-            {socialItems.map((item) =><IconButton key={item.url}><item.icon color='primary' /></IconButton>  )}
+        <Stack direction={{ xs: 'row', sm: props.isFooter ? 'row' : 'column' }}      >
+            {socialItems.map((item) =><IconButton key={item.url}><item.icon color={props.color ? props.color : 'primary'} /></IconButton>  )}
         </Stack>
     )
 }
