@@ -93,7 +93,7 @@ const navigationLinks = [
 
 
 
-export default function Header({location}) {
+export default function Header() {
     // const [selectedTab, setSelectedTab] = useState(null)
     
     // const handleClickTab = (e, newValue) => {
@@ -137,7 +137,7 @@ export default function Header({location}) {
     return (
         <Box sx={{ flexGrow: 1 }}>
            
-          <AppBar position="static" enableColorOnDark color="primary"  position="fixed" > 
+          <AppBar  color="primary"  position="fixed" > 
               <Container maxWidth='lg' disableGutters >
                  <Toolbar >
                  <Typography component={Link} to='/' sx={{color: 'text.main', marginRight:'auto'}} >Captain Termite Control </Typography>

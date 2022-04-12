@@ -1,7 +1,7 @@
 import { red } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 // import { blue, indigo } from '@mui/material/colors'
-import { amber, deepOrange, grey } from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
 // A custom theme for this app
 const theme = createTheme({
   palette: {

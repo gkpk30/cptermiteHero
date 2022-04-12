@@ -27,7 +27,7 @@ export default function Footer() {
     return (
         <Box sx={{backgroundColor:"primary.main", color: 'text.secondary', minHeight: '5vh'}}  >
             <Container maxWidth="lg" sx={{paddingTop: 6}}>
-                <Box display="flex" justifyContent='space-between'   sx={{flexDirection:{xs: 'column ', md: 'row'}, flexWrap: 'no-wrap', gap: 3}}>
+                <Box display="flex" justifyContent='space-between'   sx={{flexDirection:{xs: 'column ', md: 'row'}, gap: 3}}>
                     <Box flex='5' sx={{paddingRight: 5}} >
                         <Typography color='text.main' >Captain Termite Control</Typography>
                         <Typography mt={2} > Providing the highest level of service at affordable prices
@@ -36,8 +36,9 @@ export default function Footer() {
 
                         <Social isFooter = 'row' color="third"/>
                     </Box>
+                    
                     <Box flex='2'>
-                    <Typography >Treatments</Typography>
+                    <Link to='/treatments'><Typography color='text.main'  >Treatments</Typography></Link>
                         <ul style={{listStyle: 'none', paddingLeft: '0'}}>
                             {treatmentLinks.map((link) => {
                                 return(
@@ -52,7 +53,7 @@ export default function Footer() {
                    
                     </Box>
                     <Box flex='2'>
-                    <Typography > Termite Info</Typography>
+                    <Link to="/termiteinfo" ><Typography color='text.main' > Termite Info</Typography></Link>
                        
                        <ul style={{listStyle: 'none', paddingLeft: '0'}}>
                            <li>
@@ -73,7 +74,7 @@ export default function Footer() {
                        </ul>
                     </Box>
                     <Box flex='2'>
-                        <Typography  >Contact Us</Typography>
+                        <Link to="/contact"><Typography color='text.main'  >Contact Us</Typography></Link>
                             <ul style={{listStyle: 'none', paddingLeft: '0'}}>
                                 <li style={{marginBottom: '4px'}}>
                                     <Link  to="/contact" sx={{color: 'text.secondary', fontWeight: 'medium', fontSize:'.72rem'}} >
