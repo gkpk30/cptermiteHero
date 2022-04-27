@@ -1,4 +1,4 @@
-Gatsby Site using Material UI (mui.com)
+Gatsby Site using Material UI v5 (mui.com), ChartJS , Markdown
 
 # Gatsby example
 
