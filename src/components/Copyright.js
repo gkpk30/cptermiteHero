@@ -8,7 +8,7 @@ export default function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '} 
-      <MuiLink color="inherit" href="https://gnkdesigns.com/">
+      <MuiLink color="inherit" href="https://salientdynamics.com/">
         {siteName}
       </MuiLink>{' '}
       {new Date().getFullYear()}
