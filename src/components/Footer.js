@@ -104,7 +104,7 @@ export default function Footer() {
                     </Box>
                 </Box>
                 <Divider  sx={{borderColor: 'text.secondary', my:4}}/>
-                <Copyright siteName = {'gnkDesigns'}/>
+                <Copyright siteName = {'salient dynamics'}/>
            </Container>
         </Box>
     )
